@@ -1,0 +1,529 @@
+Year,Category,Subcategory Code,Subcategory Name,Document Count,Keyword 1,Keyword 2,Keyword 3,Keyword 4,Keyword 5,Keyword 6,Keyword 7,Keyword 8,Keyword 9,Keyword 10
+2015,Computer Science,cs.AI,Artificial Intelligence,1117,algorithm,learning,information,search,order,time,knowledge,reasoning,methods,belief
+2016,Computer Science,cs.AI,Artificial Intelligence,1945,learning,knowledge,system,human,algorithm,algorithms,problems,propose,network,level
+2017,Computer Science,cs.AI,Artificial Intelligence,2816,learning,time,human,methods,algorithm,performance,algorithms,decision,knowledge,detection
+2018,Computer Science,cs.AI,Artificial Intelligence,4280,learning,deep,neural,tasks,network,methods,human,systems,algorithms,performance
+2019,Computer Science,cs.AI,Artificial Intelligence,4758,learning,deep,training,agent,reinforcement,propose,machine,state,neural,performance
+2020,Computer Science,cs.AI,Artificial Intelligence,7417,learning,algorithm,system,reinforcement,performance,agent,deep,systems,decision,framework
+2021,Computer Science,cs.AI,Artificial Intelligence,12521,learning,deep,tasks,performance,network,methods,neural,state,training,propose
+2022,Computer Science,cs.AI,Artificial Intelligence,14806,learning,performance,training,deep,methods,multi,dataset,propose,neural,state
+2023,Computer Science,cs.AI,Artificial Intelligence,21850,learning,language,llms,methods,performance,state,framework,propose,human,training
+2024,Computer Science,cs.AI,Artificial Intelligence,33030,learning,language,graph,performance,methods,neural,systems,various,time,network
+2025,Computer Science,cs.AI,Artificial Intelligence,45119,learning,performance,language,methods,framework,datasets,information,human,dataset,across
+2026,Computer Science,cs.AI,Artificial Intelligence,11422,learning,framework,language,training,reasoning,performance,across,llms,propose,methods
+2015,Computer Science,cs.CL,Computation & Language,832,language,text,translation,information,word,neural,semantic,systems,state,machine
+2016,Computer Science,cs.CL,Computation & Language,1692,word,language,neural,learning,system,sentiment,embeddings,training,text,semantic
+2017,Computer Science,cs.CL,Computation & Language,2399,neural,language,text,word,learning,information,system,translation,analysis,machine
+2018,Computer Science,cs.CL,Computation & Language,3729,word,neural,learning,language,sentence,information,representations,state,propose,tasks
+2019,Computer Science,cs.CL,Computation & Language,5393,language,learning,text,translation,word,speech,information,natural,methods,neural
+2020,Computer Science,cs.CL,Computation & Language,7125,language,word,speech,learning,text,training,neural,analysis,human,dataset
+2021,Computer Science,cs.CL,Computation & Language,8083,language,learning,text,training,knowledge,tasks,information,classification,domain,performance
+2022,Computer Science,cs.CL,Computation & Language,8971,language,learning,performance,knowledge,tasks,text,training,propose,dataset,natural
+2023,Computer Science,cs.CL,Computation & Language,13600,language,llms,knowledge,learning,text,tasks,performance,information,human,propose
+2024,Computer Science,cs.CL,Computation & Language,20689,language,llms,tasks,performance,languages,learning,information,dataset,methods,text
+2025,Computer Science,cs.CL,Computation & Language,23754,language,llms,performance,tasks,knowledge,across,text,information,reasoning,training
+2026,Computer Science,cs.CL,Computation & Language,5342,language,reasoning,llms,training,across,performance,framework,introduce,multi,evaluation
+2015,Computer Science,cs.CC,Computational Complexity,575,complexity,polynomial,problems,time,bound,graph,graphs,function,algorithms,size
+2016,Computer Science,cs.CC,Computational Complexity,584,complexity,time,problems,polynomial,algorithm,algorithms,graph,known,lower,bounds
+2017,Computer Science,cs.CC,Computational Complexity,635,complexity,polynomial,time,problems,graph,algorithm,bound,bounds,function,number
+2018,Computer Science,cs.CC,Computational Complexity,613,time,complexity,algorithm,polynomial,problems,graph,algorithms,degree,function,approximation
+2019,Computer Science,cs.CC,Computational Complexity,735,complexity,algorithm,time,polynomial,graph,quantum,algorithms,problems,graphs,class
+2020,Computer Science,cs.CC,Computational Complexity,805,complexity,time,problems,graph,polynomial,graphs,quantum,algorithm,algorithms,linear
+2021,Computer Science,cs.CC,Computational Complexity,777,time,complexity,quantum,algorithm,polynomial,algorithms,graphs,graph,problems,size
+2022,Computer Science,cs.CC,Computational Complexity,776,complexity,time,algorithm,polynomial,problems,graph,quantum,graphs,lower,algorithms
+2023,Computer Science,cs.CC,Computational Complexity,838,time,complexity,problems,algorithm,graphs,polynomial,algorithms,number,quantum,lower
+2024,Computer Science,cs.CC,Computational Complexity,975,complexity,algorithm,time,quantum,polynomial,graph,number,problems,mathbb,algorithms
+2025,Computer Science,cs.CC,Computational Complexity,1031,time,complexity,quantum,mathsf,graph,algorithm,bounds,graphs,polynomial,lower
+2026,Computer Science,cs.CC,Computational Complexity,255,time,complexity,algorithm,polynomial,graph,algorithms,bounds,graphs,number,lower
+2015,Computer Science,cs.CV,Computer Vision,2264,image,images,learning,deep,performance,methods,features,networks,state,propose
+2016,Computer Science,cs.CV,Computer Vision,3631,image,images,learning,methods,video,deep,object,performance,state,segmentation
+2017,Computer Science,cs.CV,Computer Vision,5724,image,images,learning,network,features,video,deep,propose,classification,training
+2018,Computer Science,cs.CV,Computer Vision,8591,image,network,learning,images,deep,networks,methods,classification,neural,training
+2019,Computer Science,cs.CV,Computer Vision,11601,learning,image,network,images,propose,detection,neural,deep,training,segmentation
+2020,Computer Science,cs.CV,Computer Vision,15340,image,learning,network,methods,images,deep,neural,performance,detection,networks
+2021,Computer Science,cs.CV,Computer Vision,17203,learning,image,methods,segmentation,network,training,video,feature,neural,object
+2022,Computer Science,cs.CV,Computer Vision,19692,learning,image,methods,training,propose,dataset,network,images,detection,multi
+2023,Computer Science,cs.CV,Computer Vision,24523,image,learning,methods,performance,object,segmentation,propose,datasets,existing,novel
+2024,Computer Science,cs.CV,Computer Vision,30584,image,images,methods,training,learning,video,dataset,quality,performance,propose
+2025,Computer Science,cs.CV,Computer Vision,34974,image,learning,video,methods,performance,text,information,dataset,segmentation,propose
+2026,Computer Science,cs.CV,Computer Vision,7617,performance,visual,learning,framework,image,training,propose,vision,methods,state
+2015,Computer Science,cs.CY,Computers & Society,704,information,research,system,learning,social,science,online,factors,students,world
+2016,Computer Science,cs.CY,Computers & Society,813,information,research,learning,social,users,system,cloud,analysis,security,privacy
+2017,Computer Science,cs.CY,Computers & Society,941,learning,system,privacy,systems,social,user,information,time,analysis,human
+2018,Computer Science,cs.CY,Computers & Society,1306,learning,research,system,network,information,social,systems,software,cloud,development
+2019,Computer Science,cs.CY,Computers & Society,1421,information,learning,framework,system,time,users,research,online,user,analysis
+2020,Computer Science,cs.CY,Computers & Society,2441,learning,privacy,system,research,systems,covid,social,contact,tracing,digital
+2021,Computer Science,cs.CY,Computers & Society,2261,learning,systems,information,analysis,fairness,social,design,research,system,human
+2022,Computer Science,cs.CY,Computers & Society,2223,learning,information,systems,research,social,students,they,bias,analysis,media
+2023,Computer Science,cs.CY,Computers & Society,3090,learning,research,social,systems,bias,fairness,online,analysis,media,students
+2024,Computer Science,cs.CY,Computers & Society,4122,learning,performance,fairness,research,language,information,systems,students,time,analysis
+2025,Computer Science,cs.CY,Computers & Society,5080,systems,language,human,llms,framework,intelligence,critical,research,social,ethical
+2026,Computer Science,cs.CY,Computers & Society,1110,systems,human,llms,safety,social,design,across,framework,support,language
+2015,Computer Science,cs.CR,Cryptography & Security,853,security,attacks,system,privacy,information,protocol,user,protocols,systems,detection
+2016,Computer Science,cs.CR,Cryptography & Security,1042,security,privacy,information,system,systems,malware,attack,detection,attacks,network
+2017,Computer Science,cs.CR,Cryptography & Security,1484,privacy,security,quantum,attacks,analysis,adversarial,system,scheme,information,network
+2018,Computer Science,cs.CR,Cryptography & Security,2269,security,privacy,information,attacks,systems,analysis,network,cloud,devices,system
+2019,Computer Science,cs.CR,Cryptography & Security,3015,security,attacks,information,attack,privacy,adversarial,network,networks,learning,propose
+2020,Computer Science,cs.CR,Cryptography & Security,3702,privacy,security,attacks,attack,system,learning,systems,network,detection,applications
+2021,Computer Science,cs.CR,Cryptography & Security,3993,security,learning,privacy,attacks,detection,information,attack,quantum,system,network
+2022,Computer Science,cs.CR,Cryptography & Security,4512,privacy,learning,attacks,attack,security,detection,training,system,private,adversarial
+2023,Computer Science,cs.CR,Cryptography & Security,5185,security,attacks,learning,privacy,adversarial,systems,attack,detection,system,software
+2024,Computer Science,cs.CR,Cryptography & Security,6545,privacy,attacks,learning,security,techniques,network,systems,information,adversarial,attack
+2025,Computer Science,cs.CR,Cryptography & Security,7909,attacks,security,privacy,systems,detection,learning,network,analysis,quantum,adversarial
+2026,Computer Science,cs.CR,Cryptography & Security,1823,security,privacy,attacks,attack,across,detection,systems,performance,framework,agent
+2015,Computer Science,cs.DS,Data Structures & Algorithms,1340,algorithm,graph,time,algorithms,graphs,number,problems,given,approximation,size
+2016,Computer Science,cs.DS,Data Structures & Algorithms,1489,algorithm,graph,time,algorithms,problems,number,given,complexity,graphs,approximation
+2017,Computer Science,cs.DS,Data Structures & Algorithms,1604,algorithm,time,graph,algorithms,number,graphs,given,networks,known,space
+2018,Computer Science,cs.DS,Data Structures & Algorithms,1765,algorithm,time,algorithms,approximation,graph,problems,linear,graphs,number,complexity
+2019,Computer Science,cs.DS,Data Structures & Algorithms,2040,algorithm,time,algorithms,graph,graphs,space,approximation,distance,optimal,number
+2020,Computer Science,cs.DS,Data Structures & Algorithms,2236,algorithm,time,graph,algorithms,graphs,approximation,problems,number,complexity,given
+2021,Computer Science,cs.DS,Data Structures & Algorithms,1990,algorithm,time,approximation,algorithms,graph,number,problems,graphs,varepsilon,complexity
+2022,Computer Science,cs.DS,Data Structures & Algorithms,2032,algorithm,time,algorithms,graph,graphs,approximation,matching,linear,number,problems
+2023,Computer Science,cs.DS,Data Structures & Algorithms,2225,algorithm,time,algorithms,graph,approximation,graphs,number,problems,complexity,given
+2024,Computer Science,cs.DS,Data Structures & Algorithms,2305,algorithm,time,algorithms,graph,approximation,graphs,number,optimal,linear,given
+2025,Computer Science,cs.DS,Data Structures & Algorithms,2379,algorithm,time,graph,algorithms,graphs,size,approximation,given,bounds,polynomial
+2026,Computer Science,cs.DS,Data Structures & Algorithms,533,algorithm,time,graph,graphs,algorithms,complexity,optimal,approximation,given,number
+2015,Computer Science,cs.DB,Databases,370,database,query,information,algorithms,quality,time,process,algorithm,many,datasets
+2016,Computer Science,cs.DB,Databases,420,query,queries,database,graph,algorithms,time,real,mining,algorithm,systems
+2017,Computer Science,cs.DB,Databases,507,query,queries,time,database,algorithm,systems,analysis,processing,graph,system
+2018,Computer Science,cs.DB,Databases,540,query,database,time,queries,algorithms,learning,system,analysis,datasets,systems
+2019,Computer Science,cs.DB,Databases,740,query,database,queries,performance,time,learning,systems,system,knowledge,datasets
+2020,Computer Science,cs.DB,Databases,884,query,graph,queries,database,time,learning,algorithm,knowledge,graphs,dataset
+2021,Computer Science,cs.DB,Databases,806,query,performance,time,graph,queries,database,graphs,real,techniques,algorithms
+2022,Computer Science,cs.DB,Databases,843,query,queries,knowledge,real,time,performance,database,privacy,systems,applications
+2023,Computer Science,cs.DB,Databases,979,query,database,graph,time,performance,databases,learning,systems,process,datasets
+2024,Computer Science,cs.DB,Databases,1176,query,performance,systems,database,queries,learning,process,time,language,graph
+2025,Computer Science,cs.DB,Databases,1496,query,queries,graph,language,performance,systems,search,database,framework,llms
+2026,Computer Science,cs.DB,Databases,439,query,queries,language,search,performance,database,memory,knowledge,time,system
+2015,Computer Science,cs.DL,Digital Libraries,243,research,citation,scientific,science,papers,information,impact,articles,search,index
+2016,Computer Science,cs.DL,Digital Libraries,258,research,citation,scientific,papers,impact,analysis,network,authors,index,information
+2017,Computer Science,cs.DL,Digital Libraries,292,research,scientific,citation,analysis,papers,citations,information,science,impact,networks
+2018,Computer Science,cs.DL,Digital Libraries,434,research,scientific,citation,analysis,articles,publications,performance,information,science,papers
+2019,Computer Science,cs.DL,Digital Libraries,322,research,papers,citation,scientific,publications,analysis,science,citations,researchers,information
+2020,Computer Science,cs.DL,Digital Libraries,404,research,scientific,papers,science,impact,analysis,covid,citation,publications,open
+2021,Computer Science,cs.DL,Digital Libraries,479,research,scientific,science,citation,analysis,information,publications,knowledge,impact,literature
+2022,Computer Science,cs.DL,Digital Libraries,357,research,scientific,science,citation,papers,publications,knowledge,information,articles,analysis
+2023,Computer Science,cs.DL,Digital Libraries,423,research,scientific,science,impact,citation,analysis,papers,information,digital,attention
+2024,Computer Science,cs.DL,Digital Libraries,496,research,papers,scientific,citation,science,publications,open,citations,analysis,quality
+2025,Computer Science,cs.DL,Digital Libraries,603,research,citation,scientific,knowledge,science,open,language,analysis,metadata,papers
+2026,Computer Science,cs.DL,Digital Libraries,121,research,scientific,language,knowledge,science,dataset,papers,review,analysis,across
+2015,Computer Science,cs.DM,Discrete Mathematics,759,graph,graphs,algorithm,number,time,vertices,vertex,every,bounds,algorithms
+2016,Computer Science,cs.DM,Discrete Mathematics,740,graph,graphs,number,algorithm,vertices,time,problems,given,complexity,vertex
+2017,Computer Science,cs.DM,Discrete Mathematics,801,graphs,graph,time,algorithm,mathcal,number,mathbb,problems,vertices,given
+2018,Computer Science,cs.DM,Discrete Mathematics,869,graphs,graph,number,algorithm,time,edge,random,case,degree,algorithms
+2019,Computer Science,cs.DM,Discrete Mathematics,1000,graph,graphs,time,algorithm,number,algorithms,vertices,vertex,bound,known
+2020,Computer Science,cs.DM,Discrete Mathematics,1034,graph,graphs,algorithm,number,time,edges,linear,edge,mathcal,vertex
+2021,Computer Science,cs.DM,Discrete Mathematics,1026,graphs,graph,time,algorithm,number,vertex,problems,complexity,vertices,given
+2022,Computer Science,cs.DM,Discrete Mathematics,1025,graph,graphs,number,mathcal,algorithm,time,complexity,vertex,every,problems
+2023,Computer Science,cs.DM,Discrete Mathematics,1076,graph,graphs,algorithm,number,time,vertex,problems,vertices,every,prove
+2024,Computer Science,cs.DM,Discrete Mathematics,1127,graph,graphs,number,algorithm,time,vertex,bound,problems,vertices,linear
+2025,Computer Science,cs.DM,Discrete Mathematics,1183,graph,graphs,algorithm,mathcal,time,number,edge,vertices,problems,complexity
+2026,Computer Science,cs.DM,Discrete Mathematics,234,graphs,graph,number,time,polynomial,algorithm,vertex,known,every,bounded
+2015,Computer Science,cs.DC,Distributed Computing,910,time,performance,algorithm,cloud,computing,parallel,system,applications,algorithms,distributed
+2016,Computer Science,cs.DC,Distributed Computing,1031,performance,distributed,computing,systems,algorithm,network,time,cloud,memory,communication
+2017,Computer Science,cs.DC,Distributed Computing,1292,distributed,performance,time,algorithm,algorithms,network,systems,computing,applications,cloud
+2018,Computer Science,cs.DC,Distributed Computing,1588,distributed,time,algorithm,performance,algorithms,cloud,parallel,computing,network,system
+2019,Computer Science,cs.DC,Distributed Computing,2042,performance,distributed,algorithm,systems,graph,algorithms,system,time,computing,applications
+2020,Computer Science,cs.DC,Distributed Computing,2385,performance,learning,time,distributed,cloud,memory,network,applications,computing,algorithm
+2021,Computer Science,cs.DC,Distributed Computing,2352,training,distributed,learning,performance,time,computing,edge,network,algorithm,algorithms
+2022,Computer Science,cs.DC,Distributed Computing,2219,learning,performance,training,network,memory,applications,distributed,computing,propose,time
+2023,Computer Science,cs.DC,Distributed Computing,2566,learning,distributed,performance,time,systems,system,training,algorithm,memory,cloud
+2024,Computer Science,cs.DC,Distributed Computing,3110,learning,performance,distributed,computing,network,training,federated,applications,communication,systems
+2025,Computer Science,cs.DC,Distributed Computing,3656,performance,memory,training,time,system,energy,learning,systems,framework,across
+2026,Computer Science,cs.DC,Distributed Computing,768,performance,memory,systems,distributed,inference,framework,cost,time,across,communication
+2015,Computer Science,cs.ET,Emerging Technologies,175,computing,systems,quantum,gates,reversible,system,gate,circuit,communication,logic
+2016,Computer Science,cs.ET,Emerging Technologies,204,energy,systems,quantum,information,memory,computing,communication,time,design,molecular
+2017,Computer Science,cs.ET,Emerging Technologies,228,quantum,computing,circuits,design,memory,networks,circuit,systems,energy,performance
+2018,Computer Science,cs.ET,Emerging Technologies,342,quantum,circuits,computing,time,network,circuit,algorithm,networks,energy,systems
+2019,Computer Science,cs.ET,Emerging Technologies,400,quantum,neural,network,design,memory,computing,power,networks,circuits,energy
+2020,Computer Science,cs.ET,Emerging Technologies,417,quantum,network,computing,neural,hardware,networks,performance,algorithm,design,memory
+2021,Computer Science,cs.ET,Emerging Technologies,498,quantum,computing,neural,networks,optical,hardware,memory,energy,design,systems
+2022,Computer Science,cs.ET,Emerging Technologies,476,quantum,computing,circuits,circuit,memory,network,neural,time,performance,devices
+2023,Computer Science,cs.ET,Emerging Technologies,661,quantum,computing,circuit,energy,memory,time,optimization,learning,networks,performance
+2024,Computer Science,cs.ET,Emerging Technologies,1279,quantum,design,computing,system,performance,circuit,networks,systems,optimization,memory
+2025,Computer Science,cs.ET,Emerging Technologies,1484,quantum,system,learning,computing,performance,energy,framework,systems,design,optimization
+2026,Computer Science,cs.ET,Emerging Technologies,335,quantum,performance,systems,energy,learning,framework,multi,across,hardware,accuracy
+2015,Computer Science,cs.FL,Formal Languages,287,automata,languages,finite,language,regular,complexity,free,time,tree,deterministic
+2016,Computer Science,cs.FL,Formal Languages,271,automata,languages,finite,automaton,words,complexity,regular,state,order,number
+2017,Computer Science,cs.FL,Formal Languages,330,automata,finite,languages,regular,language,systems,word,complexity,state,automaton
+2018,Computer Science,cs.FL,Formal Languages,304,languages,regular,automata,finite,language,words,systems,complexity,class,state
+2019,Computer Science,cs.FL,Formal Languages,412,automata,languages,finite,time,words,regular,language,complexity,number,state
+2020,Computer Science,cs.FL,Formal Languages,447,automata,finite,state,number,languages,language,automaton,words,word,regular
+2021,Computer Science,cs.FL,Formal Languages,455,automata,finite,systems,state,logic,automaton,system,algorithm,regular,complexity
+2022,Computer Science,cs.FL,Formal Languages,421,automata,time,language,systems,logic,temporal,languages,state,prove,algorithm
+2023,Computer Science,cs.FL,Formal Languages,471,automata,finite,languages,systems,language,given,deterministic,words,semantics,complexity
+2024,Computer Science,cs.FL,Formal Languages,464,automata,state,algorithm,system,languages,regular,systems,language,complexity,words
+2025,Computer Science,cs.FL,Formal Languages,532,automata,systems,finite,languages,language,time,verification,system,formal,regular
+2026,Computer Science,cs.FL,Formal Languages,131,automata,finite,language,languages,regular,state,complexity,time,deterministic,free
+2015,Computer Science,cs.GT,Computer Science & Game Theory,532,game,games,optimal,mechanism,information,agents,mechanisms,equilibrium,price,network
+2016,Computer Science,cs.GT,Computer Science & Game Theory,617,game,games,mechanism,equilibrium,optimal,network,agents,players,networks,number
+2017,Computer Science,cs.GT,Computer Science & Game Theory,658,game,games,optimal,equilibrium,mechanism,algorithm,strategy,information,case,number
+2018,Computer Science,cs.GT,Computer Science & Game Theory,715,game,games,agents,equilibrium,algorithms,algorithm,learning,mechanism,information,network
+2019,Computer Science,cs.GT,Computer Science & Game Theory,878,games,game,learning,agents,algorithm,time,equilibrium,information,strategy,players
+2020,Computer Science,cs.GT,Computer Science & Game Theory,1050,games,game,agents,algorithm,mechanism,optimal,social,equilibrium,agent,time
+2021,Computer Science,cs.GT,Computer Science & Game Theory,1102,agents,games,game,information,optimal,learning,agent,players,player,equilibrium
+2022,Computer Science,cs.GT,Computer Science & Game Theory,1194,games,learning,game,equilibrium,agents,nash,equilibria,algorithm,algorithms,agent
+2023,Computer Science,cs.GT,Computer Science & Game Theory,1330,games,game,learning,information,agents,multi,algorithm,mechanism,equilibrium,agent
+2024,Computer Science,cs.GT,Computer Science & Game Theory,1550,learning,games,algorithms,game,agents,algorithm,framework,agent,equilibrium,optimal
+2025,Computer Science,cs.GT,Computer Science & Game Theory,1589,games,agents,game,learning,optimal,agent,algorithm,algorithms,framework,number
+2026,Computer Science,cs.GT,Computer Science & Game Theory,467,agents,agent,game,games,optimal,algorithm,framework,equilibrium,learning,online
+2015,Computer Science,cs.GL,General Literature,3,computational,information,scientific,computer,science,research,structure,publishing,students,works
+2016,Computer Science,cs.GL,General Literature,6,science,solution,tower,naughton,ideas,mram,hanoi,incompleteness,equal,computation
+2017,Computer Science,cs.GL,General Literature,10,research,internet,code,science,scientific,artificial,intelligence,energy,other,blind
+2018,Computer Science,cs.GL,General Literature,12,science,research,infrastructure,current,digital,rankings,vehicle,transportation,communication,human
+2019,Computer Science,cs.GL,General Literature,13,computing,research,computer,project,software,university,scientific,metrics,years,oprema
+2020,Computer Science,cs.GL,General Literature,14,research,software,science,computation,analog,kolmogorov,computer,engineering,digital,design
+2021,Computer Science,cs.GL,General Literature,15,computer,science,turing,review,report,anomalies,award,research,process,light
+2022,Computer Science,cs.GL,General Literature,35,science,systems,research,learning,analysis,review,computer,machine,future,information
+2023,Computer Science,cs.GL,General Literature,10,science,quantum,games,lovelace,babbage,chatgpt,research,field,computer,program
+2024,Computer Science,cs.GL,General Literature,6,research,science,computer,development,learning,bense,images,artificial,chatbots,book
+2025,Computer Science,cs.GL,General Literature,10,kaggle,software,governance,learning,research,digital,years,aging,human,code
+2026,Computer Science,cs.GL,General Literature,3,training,substance,problems,microcoder,difficulty,classification,categories,performance,child,across
+2015,Computer Science,cs.GR,Graphics,114,algorithm,point,color,visualization,image,analysis,techniques,time,surface,methods
+2016,Computer Science,cs.GR,Graphics,169,image,algorithm,surface,images,user,objects,mesh,face,time,shape
+2017,Computer Science,cs.GR,Graphics,258,image,images,user,algorithm,design,time,surface,methods,system,demonstrate
+2018,Computer Science,cs.GR,Graphics,369,image,shape,methods,algorithm,time,images,novel,space,network,propose
+2019,Computer Science,cs.GR,Graphics,529,image,design,network,learning,video,shape,images,point,neural,propose
+2020,Computer Science,cs.GR,Graphics,685,images,learning,network,image,methods,point,propose,motion,deep,space
+2021,Computer Science,cs.GR,Graphics,773,image,neural,novel,images,network,propose,methods,rendering,learning,space
+2022,Computer Science,cs.GR,Graphics,918,neural,image,rendering,images,learning,scene,novel,view,motion,propose
+2023,Computer Science,cs.GR,Graphics,1232,rendering,neural,methods,novel,real,time,image,propose,fields,learning
+2024,Computer Science,cs.GR,Graphics,1440,methods,image,images,novel,generation,quality,view,propose,neural,mesh
+2025,Computer Science,cs.GR,Graphics,1594,methods,generation,video,neural,motion,rendering,multi,gaussian,view,novel
+2026,Computer Science,cs.GR,Graphics,287,gaussian,time,methods,rendering,framework,generation,real,existing,motion,quality
+2015,Computer Science,cs.AR,Hardware Architecture,83,memory,design,performance,architecture,hardware,system,fpga,systems,time,power
+2016,Computer Science,cs.AR,Hardware Architecture,136,design,memory,energy,performance,systems,architecture,system,dram,hardware,fpga
+2017,Computer Science,cs.AR,Hardware Architecture,183,memory,performance,energy,design,power,hardware,cache,architecture,processing,time
+2018,Computer Science,cs.AR,Hardware Architecture,250,memory,performance,dram,hardware,design,system,cache,power,latency,architecture
+2019,Computer Science,cs.AR,Hardware Architecture,245,memory,design,performance,energy,power,system,hardware,applications,time,cache
+2020,Computer Science,cs.AR,Hardware Architecture,531,memory,performance,hardware,architecture,design,energy,power,system,learning,computing
+2021,Computer Science,cs.AR,Hardware Architecture,726,hardware,performance,memory,design,architecture,energy,neural,system,computing,power
+2022,Computer Science,cs.AR,Hardware Architecture,789,memory,hardware,performance,energy,design,software,applications,architecture,accelerator,processing
+2023,Computer Science,cs.AR,Hardware Architecture,943,design,hardware,memory,performance,power,fpga,computing,applications,processing,system
+2024,Computer Science,cs.AR,Hardware Architecture,1258,memory,hardware,design,performance,energy,neural,system,dram,architecture,applications
+2025,Computer Science,cs.AR,Hardware Architecture,1713,memory,performance,design,hardware,power,applications,time,architecture,system,efficient
+2026,Computer Science,cs.AR,Hardware Architecture,369,memory,hardware,design,performance,energy,efficiency,level,time,framework,times
+2015,Computer Science,cs.HC,Human-Computer Interaction,306,users,user,online,system,design,time,research,systems,interaction,people
+2016,Computer Science,cs.HC,Human-Computer Interaction,506,human,user,learning,interaction,system,systems,users,computer,social,mobile
+2017,Computer Science,cs.HC,Human-Computer Interaction,658,human,user,systems,learning,robot,interaction,information,system,design,users
+2018,Computer Science,cs.HC,Human-Computer Interaction,920,learning,users,system,human,design,user,time,systems,research,information
+2019,Computer Science,cs.HC,Human-Computer Interaction,1414,human,user,users,system,learning,virtual,design,mobile,real,analysis
+2020,Computer Science,cs.HC,Human-Computer Interaction,1930,user,visualization,users,learning,human,design,interaction,system,analysis,virtual
+2021,Computer Science,cs.HC,Human-Computer Interaction,2173,human,learning,user,design,users,time,system,research,information,performance
+2022,Computer Science,cs.HC,Human-Computer Interaction,2508,design,human,user,learning,users,information,research,system,systems,interaction
+2023,Computer Science,cs.HC,Human-Computer Interaction,3715,user,design,human,systems,learning,virtual,research,framework,system,users
+2024,Computer Science,cs.HC,Human-Computer Interaction,5394,human,user,users,people,design,interaction,virtual,performance,system,learning
+2025,Computer Science,cs.HC,Human-Computer Interaction,6568,human,user,design,system,language,research,learning,understanding,users,challenges
+2026,Computer Science,cs.HC,Human-Computer Interaction,1712,human,design,user,support,users,findings,performance,language,agents,across
+2015,Computer Science,cs.IR,Information Retrieval,495,information,user,users,search,systems,text,retrieval,system,analysis,propose
+2016,Computer Science,cs.IR,Information Retrieval,575,information,user,systems,social,users,search,content,recommendation,retrieval,learning
+2017,Computer Science,cs.IR,Information Retrieval,792,user,information,recommendation,search,learning,text,methods,retrieval,propose,systems
+2018,Computer Science,cs.IR,Information Retrieval,1127,recommendation,search,learning,user,information,systems,system,retrieval,text,neural
+2019,Computer Science,cs.IR,Information Retrieval,1631,learning,methods,information,user,text,question,neural,systems,users,retrieval
+2020,Computer Science,cs.IR,Information Retrieval,1998,user,recommendation,learning,information,users,ranking,search,systems,retrieval,propose
+2021,Computer Science,cs.IR,Information Retrieval,2030,recommendation,user,information,item,learning,knowledge,graph,search,methods,propose
+2022,Computer Science,cs.IR,Information Retrieval,2125,learning,user,information,recommendation,systems,knowledge,methods,recommender,retrieval,performance
+2023,Computer Science,cs.IR,Information Retrieval,2625,information,user,recommendation,retrieval,performance,learning,language,recommender,systems,search
+2024,Computer Science,cs.IR,Information Retrieval,3634,user,recommendation,learning,information,retrieval,systems,item,performance,language,search
+2025,Computer Science,cs.IR,Information Retrieval,4128,retrieval,user,information,llms,language,knowledge,recommendation,performance,systems,generation
+2026,Computer Science,cs.IR,Information Retrieval,1024,retrieval,user,recommendation,systems,information,multi,framework,semantic,search,across
+2015,Computer Science,cs.IT,Information Theory,3015,energy,channel,performance,wireless,codes,information,algorithm,networks,rate,error
+2016,Computer Science,cs.IT,Information Theory,3280,channel,optimal,information,network,rate,number,user,energy,users,noise
+2017,Computer Science,cs.IT,Information Theory,3513,channel,codes,performance,networks,capacity,time,rate,network,error,probability
+2018,Computer Science,cs.IT,Information Theory,3231,information,channel,user,codes,time,multiple,scheme,rate,performance,power
+2019,Computer Science,cs.IT,Information Theory,3282,information,channel,rate,performance,codes,scheme,number,networks,error,multiple
+2020,Computer Science,cs.IT,Information Theory,3604,performance,channel,codes,information,algorithm,wireless,systems,learning,communication,rate
+2021,Computer Science,cs.IT,Information Theory,3687,codes,rate,channel,communication,system,information,algorithm,entropy,multiple,power
+2022,Computer Science,cs.IT,Information Theory,3579,codes,channel,information,systems,multiple,rate,communication,algorithm,user,linear
+2023,Computer Science,cs.IT,Information Theory,3592,channel,codes,communication,performance,information,design,sensing,multiple,systems,system
+2024,Computer Science,cs.IT,Information Theory,3759,channel,information,performance,system,rate,communication,multi,sensing,network,multiple
+2025,Computer Science,cs.IT,Information Theory,3809,codes,channel,information,rate,systems,performance,communication,decoding,system,user
+2026,Computer Science,cs.IT,Information Theory,1039,information,communication,systems,channel,framework,performance,sensing,rate,learning,optimal
+2015,Computer Science,cs.LG,Machine Learning,2490,learning,algorithm,clustering,deep,algorithms,classification,networks,methods,performance,neural
+2016,Computer Science,cs.LG,Machine Learning,3576,learning,neural,deep,algorithm,classification,training,features,methods,algorithms,networks
+2017,Computer Science,cs.LG,Machine Learning,5252,learning,deep,networks,neural,network,methods,performance,algorithm,training,gradient
+2018,Computer Science,cs.LG,Machine Learning,10499,learning,deep,networks,neural,network,methods,performance,tasks,algorithm,time
+2019,Computer Science,cs.LG,Machine Learning,19293,learning,neural,deep,training,networks,network,methods,performance,propose,prediction
+2020,Computer Science,cs.LG,Machine Learning,25889,learning,neural,network,performance,networks,training,graph,detection,methods,algorithm
+2021,Computer Science,cs.LG,Machine Learning,26532,learning,training,performance,neural,networks,graph,propose,domain,methods,network
+2022,Computer Science,cs.LG,Machine Learning,28721,learning,methods,deep,training,propose,networks,neural,performance,machine,detection
+2023,Computer Science,cs.LG,Machine Learning,33020,learning,performance,neural,propose,methods,framework,demonstrate,network,deep,graph
+2024,Computer Science,cs.LG,Machine Learning,39785,learning,graph,performance,methods,classification,time,network,neural,machine,novel
+2025,Computer Science,cs.LG,Machine Learning,46000,learning,methods,networks,performance,neural,time,training,analysis,datasets,framework
+2026,Computer Science,cs.LG,Machine Learning,11049,learning,training,methods,framework,across,time,performance,prediction,propose,inference
+2015,Computer Science,cs.LO,Logic in Computer Science,856,logic,systems,linear,proof,order,semantics,program,proofs,probabilistic,calculus
+2016,Computer Science,cs.LO,Logic in Computer Science,942,logic,systems,theory,semantics,language,knowledge,type,checking,linear,system
+2017,Computer Science,cs.LO,Logic in Computer Science,1042,logic,semantics,theory,systems,system,order,verification,linear,proof,some
+2018,Computer Science,cs.LO,Logic in Computer Science,1078,logic,theory,systems,time,order,learning,proof,semantics,logical,algorithm
+2019,Computer Science,cs.LO,Logic in Computer Science,1224,logic,theory,order,system,programs,calculus,semantics,time,state,systems
+2020,Computer Science,cs.LO,Logic in Computer Science,1257,logic,system,state,some,programs,systems,framework,reasoning,order,theory
+2021,Computer Science,cs.LO,Logic in Computer Science,1327,logic,systems,semantics,proof,system,theory,order,complete,finite,types
+2022,Computer Science,cs.LO,Logic in Computer Science,1222,logic,system,systems,proof,theory,order,type,time,verification,monoidal
+2023,Computer Science,cs.LO,Logic in Computer Science,1473,logic,theory,systems,semantics,system,reasoning,linear,probabilistic,proof,algorithm
+2024,Computer Science,cs.LO,Logic in Computer Science,1441,logic,systems,verification,properties,language,linear,theory,time,logics,logical
+2025,Computer Science,cs.LO,Logic in Computer Science,1656,logic,proof,system,calculus,order,systems,reasoning,verification,complexity,properties
+2026,Computer Science,cs.LO,Logic in Computer Science,416,logic,order,theory,semantics,proof,logical,reasoning,theorem,framework,type
+2015,Computer Science,cs.MS,Mathematical Software,133,algorithm,algorithms,performance,implementation,library,parallel,matrix,software,time,code
+2016,Computer Science,cs.MS,Mathematical Software,138,performance,algorithm,matrix,implementation,algorithms,parallel,methods,software,package,memory
+2017,Computer Science,cs.MS,Mathematical Software,133,performance,matrix,implementation,tensor,library,algorithm,code,parallel,algorithms,linear
+2018,Computer Science,cs.MS,Mathematical Software,145,performance,algorithm,code,problems,sparse,implementation,library,matrix,memory,efficient
+2019,Computer Science,cs.MS,Mathematical Software,154,performance,matrix,parallel,software,methods,algorithms,problems,linear,framework,code
+2020,Computer Science,cs.MS,Mathematical Software,192,performance,library,matrix,linear,parallel,algorithm,problems,systems,implementation,precision
+2021,Computer Science,cs.MS,Mathematical Software,232,performance,library,algorithms,implementation,numerical,methods,learning,code,problems,systems
+2022,Computer Science,cs.MS,Mathematical Software,167,methods,optimization,problems,performance,linear,algorithms,time,matrix,analysis,computational
+2023,Computer Science,cs.MS,Mathematical Software,174,methods,performance,algorithms,matrix,code,problems,optimization,linear,package,numerical
+2024,Computer Science,cs.MS,Mathematical Software,187,algorithm,optimization,sparse,software,methods,linear,learning,performance,tensor,matrix
+2025,Computer Science,cs.MS,Mathematical Software,208,matrix,performance,optimization,methods,algorithms,problems,algorithm,computational,framework,package
+2026,Computer Science,cs.MS,Mathematical Software,50,tensor,methods,performance,framework,numerical,systems,computational,optimization,analysis,order
+2015,Computer Science,cs.MA,Multiagent Systems,167,agent,agents,control,systems,time,system,social,multi,algorithm,networks
+2016,Computer Science,cs.MA,Multiagent Systems,235,agent,agents,systems,multi,system,simulation,network,information,time,distributed
+2017,Computer Science,cs.MA,Multiagent Systems,323,agent,agents,learning,multi,social,time,network,distributed,system,control
+2018,Computer Science,cs.MA,Multiagent Systems,463,agent,agents,learning,multi,systems,algorithm,system,time,algorithms,dynamics
+2019,Computer Science,cs.MA,Multiagent Systems,730,learning,agent,agents,multi,network,algorithm,reinforcement,information,time,state
+2020,Computer Science,cs.MA,Multiagent Systems,931,agent,agents,multi,learning,time,algorithm,reinforcement,performance,communication,information
+2021,Computer Science,cs.MA,Multiagent Systems,959,agent,agents,multi,learning,network,systems,information,communication,distributed,algorithm
+2022,Computer Science,cs.MA,Multiagent Systems,1038,agent,agents,learning,multi,algorithm,communication,systems,reinforcement,time,control
+2023,Computer Science,cs.MA,Multiagent Systems,1201,agent,agents,multi,learning,systems,algorithm,communication,framework,time,reinforcement
+2024,Computer Science,cs.MA,Multiagent Systems,1401,agent,learning,multi,agents,reinforcement,algorithm,framework,network,algorithms,simulation
+2025,Computer Science,cs.MA,Multiagent Systems,2430,agent,agents,multi,learning,framework,systems,language,system,communication,time
+2026,Computer Science,cs.MA,Multiagent Systems,638,agent,multi,agents,framework,learning,across,systems,reasoning,performance,system
+2015,Computer Science,cs.MM,Multimedia,199,video,image,content,network,multimedia,information,quality,visual,propose,detection
+2016,Computer Science,cs.MM,Multimedia,261,video,image,images,quality,content,performance,learning,methods,audio,network
+2017,Computer Science,cs.MM,Multimedia,330,video,image,network,images,propose,features,quality,learning,analysis,system
+2018,Computer Science,cs.MM,Multimedia,378,video,image,visual,learning,images,network,methods,quality,propose,performance
+2019,Computer Science,cs.MM,Multimedia,515,image,video,images,quality,learning,visual,network,performance,audio,multi
+2020,Computer Science,cs.MM,Multimedia,640,image,video,learning,images,features,methods,deep,visual,dataset,recognition
+2021,Computer Science,cs.MM,Multimedia,722,video,image,learning,network,features,methods,propose,quality,training,visual
+2022,Computer Science,cs.MM,Multimedia,926,video,audio,visual,learning,image,information,features,methods,quality,text
+2023,Computer Science,cs.MM,Multimedia,1185,video,learning,image,visual,text,audio,propose,quality,multi,features
+2024,Computer Science,cs.MM,Multimedia,1454,video,audio,visual,text,image,multi,quality,methods,modal,multimodal
+2025,Computer Science,cs.MM,Multimedia,1559,video,language,visual,audio,image,framework,performance,multi,multimodal,generation
+2026,Computer Science,cs.MM,Multimedia,291,video,audio,quality,framework,multimodal,generation,reasoning,visual,across,multi
+2015,Computer Science,cs.NI,Networking & Internet Architecture,1063,network,networks,wireless,performance,energy,nodes,traffic,mobile,time,cellular
+2016,Computer Science,cs.NI,Networking & Internet Architecture,1295,network,networks,wireless,traffic,energy,performance,communication,power,system,interference
+2017,Computer Science,cs.NI,Networking & Internet Architecture,1307,network,networks,performance,wireless,power,energy,communication,spectrum,traffic,time
+2018,Computer Science,cs.NI,Networking & Internet Architecture,1614,network,networks,wireless,communication,access,performance,time,control,energy,system
+2019,Computer Science,cs.NI,Networking & Internet Architecture,1840,network,networks,time,wireless,traffic,communication,system,service,energy,information
+2020,Computer Science,cs.NI,Networking & Internet Architecture,2029,network,networks,energy,performance,time,service,control,communication,wireless,traffic
+2021,Computer Science,cs.NI,Networking & Internet Architecture,1983,network,networks,learning,performance,communication,system,edge,multi,devices,wireless
+2022,Computer Science,cs.NI,Networking & Internet Architecture,1936,network,networks,learning,communication,performance,applications,edge,time,traffic,wireless
+2023,Computer Science,cs.NI,Networking & Internet Architecture,2048,network,networks,performance,learning,time,communication,wireless,multi,traffic,resource
+2024,Computer Science,cs.NI,Networking & Internet Architecture,2429,network,networks,learning,traffic,communication,performance,applications,system,time,wireless
+2025,Computer Science,cs.NI,Networking & Internet Architecture,2724,network,networks,performance,learning,time,framework,system,real,traffic,optimization
+2026,Computer Science,cs.NI,Networking & Internet Architecture,597,network,networks,time,learning,framework,performance,across,communication,real,traffic
+2015,Computer Science,cs.NE,Neural & Evolutionary Computing,653,neural,learning,networks,network,deep,algorithm,training,optimization,classification,convolutional
+2016,Computer Science,cs.NE,Neural & Evolutionary Computing,870,neural,learning,networks,deep,network,time,methods,training,classification,machine
+2017,Computer Science,cs.NE,Neural & Evolutionary Computing,1023,networks,neural,learning,network,deep,algorithm,algorithms,classification,performance,training
+2018,Computer Science,cs.NE,Neural & Evolutionary Computing,1208,learning,neural,networks,network,deep,algorithm,memory,optimization,training,algorithms
+2019,Computer Science,cs.NE,Neural & Evolutionary Computing,1479,neural,networks,learning,deep,network,training,algorithm,performance,algorithms,search
+2020,Computer Science,cs.NE,Neural & Evolutionary Computing,1751,learning,neural,networks,network,performance,deep,algorithm,optimization,algorithms,time
+2021,Computer Science,cs.NE,Neural & Evolutionary Computing,1427,neural,learning,networks,network,training,optimization,performance,algorithms,problems,algorithm
+2022,Computer Science,cs.NE,Neural & Evolutionary Computing,1514,learning,neural,networks,network,performance,algorithms,algorithm,training,system,spiking
+2023,Computer Science,cs.NE,Neural & Evolutionary Computing,1570,learning,neural,algorithm,networks,optimization,network,performance,training,time,algorithms
+2024,Computer Science,cs.NE,Neural & Evolutionary Computing,1855,neural,networks,optimization,learning,algorithm,performance,network,algorithms,training,spiking
+2025,Computer Science,cs.NE,Neural & Evolutionary Computing,1612,neural,networks,learning,optimization,performance,network,algorithm,framework,time,algorithms
+2026,Computer Science,cs.NE,Neural & Evolutionary Computing,362,optimization,neural,networks,learning,performance,framework,algorithm,evolutionary,training,across
+2015,Computer Science,cs.NA,Numerical Analysis,0,,,,,,,,,,
+2016,Computer Science,cs.NA,Numerical Analysis,0,,,,,,,,,,
+2017,Computer Science,cs.NA,Numerical Analysis,0,,,,,,,,,,
+2018,Computer Science,cs.NA,Numerical Analysis,0,,,,,,,,,,
+2019,Computer Science,cs.NA,Numerical Analysis,0,,,,,,,,,,
+2020,Computer Science,cs.NA,Numerical Analysis,0,,,,,,,,,,
+2021,Computer Science,cs.NA,Numerical Analysis,0,,,,,,,,,,
+2022,Computer Science,cs.NA,Numerical Analysis,0,,,,,,,,,,
+2023,Computer Science,cs.NA,Numerical Analysis,0,,,,,,,,,,
+2024,Computer Science,cs.NA,Numerical Analysis,0,,,,,,,,,,
+2025,Computer Science,cs.NA,Numerical Analysis,0,,,,,,,,,,
+2026,Computer Science,cs.NA,Numerical Analysis,0,,,,,,,,,,
+2015,Computer Science,cs.OS,Operating Systems,37,time,systems,scheduling,real,system,performance,operating,memory,applications,lustre
+2016,Computer Science,cs.OS,Operating Systems,33,system,windows,memory,time,performance,applications,level,operating,virtualization,devices
+2017,Computer Science,cs.OS,Operating Systems,49,memory,system,systems,performance,time,storage,real,devices,tasks,applications
+2018,Computer Science,cs.OS,Operating Systems,53,time,system,systems,performance,memory,operating,real,applications,kernel,design
+2019,Computer Science,cs.OS,Operating Systems,90,system,performance,memory,time,systems,applications,kernel,hardware,file,security
+2020,Computer Science,cs.OS,Operating Systems,91,memory,system,systems,performance,applications,scheduling,time,criticality,kernel,hardware
+2021,Computer Science,cs.OS,Operating Systems,68,memory,system,performance,systems,time,applications,hardware,kernel,software,devices
+2022,Computer Science,cs.OS,Operating Systems,71,memory,system,applications,performance,systems,storage,kernel,hardware,time,software
+2023,Computer Science,cs.OS,Operating Systems,116,memory,system,performance,applications,systems,storage,kernel,time,software,hardware
+2024,Computer Science,cs.OS,Operating Systems,145,memory,system,performance,systems,applications,kernel,time,management,operating,storage
+2025,Computer Science,cs.OS,Operating Systems,224,memory,system,performance,systems,kernel,time,applications,linux,level,hardware
+2026,Computer Science,cs.OS,Operating Systems,59,memory,system,time,performance,execution,systems,across,latency,inference,kernel
+2015,Computer Science,cs.OH,Other Computer Science,136,system,analysis,algorithm,time,information,design,software,simulation,energy,algorithms
+2016,Computer Science,cs.OH,Other Computer Science,119,systems,system,time,analysis,energy,information,research,software,applications,application
+2017,Computer Science,cs.OH,Other Computer Science,111,system,time,systems,analysis,design,power,sensor,networks,performance,process
+2018,Computer Science,cs.OH,Other Computer Science,106,design,system,routing,standard,time,algorithm,network,information,systems,research
+2019,Computer Science,cs.OH,Other Computer Science,122,system,systems,process,research,time,energy,analysis,design,simulations,information
+2020,Computer Science,cs.OH,Other Computer Science,0,,,,,,,,,,
+2021,Computer Science,cs.OH,Other Computer Science,0,,,,,,,,,,
+2022,Computer Science,cs.OH,Other Computer Science,0,,,,,,,,,,
+2023,Computer Science,cs.OH,Other Computer Science,0,,,,,,,,,,
+2024,Computer Science,cs.OH,Other Computer Science,0,,,,,,,,,,
+2025,Computer Science,cs.OH,Other Computer Science,0,,,,,,,,,,
+2026,Computer Science,cs.OH,Other Computer Science,0,,,,,,,,,,
+2015,Computer Science,cs.PF,Performance,157,performance,time,system,network,systems,energy,networks,analysis,simulation,power
+2016,Computer Science,cs.PF,Performance,186,performance,time,network,systems,analysis,system,networks,simulation,algorithm,multi
+2017,Computer Science,cs.PF,Performance,222,performance,time,systems,analysis,system,energy,network,networks,optimal,computing
+2018,Computer Science,cs.PF,Performance,255,performance,time,system,systems,parallel,computing,hardware,applications,network,learning
+2019,Computer Science,cs.PF,Performance,414,performance,time,system,applications,systems,analysis,algorithm,scheduling,application,learning
+2020,Computer Science,cs.PF,Performance,446,performance,system,systems,memory,time,analysis,applications,network,hardware,parallel
+2021,Computer Science,cs.PF,Performance,410,performance,memory,time,systems,system,network,learning,latency,applications,networks
+2022,Computer Science,cs.PF,Performance,350,performance,time,systems,system,learning,memory,computing,algorithms,algorithm,applications
+2023,Computer Science,cs.PF,Performance,445,performance,time,system,systems,learning,applications,analysis,training,inference,memory
+2024,Computer Science,cs.PF,Performance,471,performance,time,memory,hardware,network,analysis,systems,system,applications,computing
+2025,Computer Science,cs.PF,Performance,717,performance,memory,time,system,energy,hardware,analysis,network,framework,latency
+2026,Computer Science,cs.PF,Performance,134,performance,memory,time,energy,systems,across,latency,framework,efficiency,inference
+2015,Computer Science,cs.PL,Programming Languages,333,language,program,programs,programming,languages,order,semantics,systems,type,code
+2016,Computer Science,cs.PL,Programming Languages,418,programming,language,type,programs,program,system,semantics,code,systems,time
+2017,Computer Science,cs.PL,Programming Languages,494,language,programming,program,programs,type,system,semantics,analysis,systems,logic
+2018,Computer Science,cs.PL,Programming Languages,580,programming,program,programs,language,code,systems,semantics,performance,order,system
+2019,Computer Science,cs.PL,Programming Languages,675,programs,language,program,programming,code,type,semantics,logic,types,software
+2020,Computer Science,cs.PL,Programming Languages,678,language,programming,programs,code,program,verification,type,implementation,languages,framework
+2021,Computer Science,cs.PL,Programming Languages,748,code,language,programming,program,type,programs,types,system,semantics,languages
+2022,Computer Science,cs.PL,Programming Languages,715,code,programming,language,program,programs,type,system,performance,systems,learning
+2023,Computer Science,cs.PL,Programming Languages,815,programming,code,language,programs,program,languages,analysis,type,system,compiler
+2024,Computer Science,cs.PL,Programming Languages,849,code,language,programming,program,programs,verification,software,languages,analysis,types
+2025,Computer Science,cs.PL,Programming Languages,1064,code,language,type,performance,programming,programs,program,system,memory,time
+2026,Computer Science,cs.PL,Programming Languages,210,code,language,programming,analysis,framework,program,llms,languages,optimization,semantics
+2015,Computer Science,cs.RO,Robotics,370,robot,robots,control,system,learning,time,state,algorithm,performance,robotic
+2016,Computer Science,cs.RO,Robotics,782,robot,planning,motion,system,control,learning,time,human,robots,algorithm
+2017,Computer Science,cs.RO,Robotics,1260,robot,learning,robots,system,control,time,human,motion,real,performance
+2018,Computer Science,cs.RO,Robotics,1841,robot,learning,control,robots,tasks,human,system,real,robotic,planning
+2019,Computer Science,cs.RO,Robotics,2860,robot,learning,real,control,algorithm,robots,time,robotic,human,environments
+2020,Computer Science,cs.RO,Robotics,3972,learning,robot,system,real,human,planning,time,control,autonomous,deep
+2021,Computer Science,cs.RO,Robotics,4701,learning,system,robot,tasks,robots,control,autonomous,robotic,propose,object
+2022,Computer Science,cs.RO,Robotics,5216,robot,learning,control,real,tasks,human,robots,framework,systems,object
+2023,Computer Science,cs.RO,Robotics,6753,robot,learning,system,performance,framework,multi,robots,autonomous,control,human
+2024,Computer Science,cs.RO,Robotics,8649,robot,robots,learning,control,real,performance,robotic,autonomous,human,time
+2025,Computer Science,cs.RO,Robotics,10562,robot,robots,real,learning,human,framework,control,environments,tasks,methods
+2026,Computer Science,cs.RO,Robotics,2803,robot,real,learning,manipulation,control,human,world,framework,multi,vision
+2015,Computer Science,cs.SI,Social & Information Networks,1238,networks,social,network,community,users,graph,communities,nodes,structure,random
+2016,Computer Science,cs.SI,Social & Information Networks,1312,networks,social,network,graph,users,nodes,media,community,information,online
+2017,Computer Science,cs.SI,Social & Information Networks,1382,networks,network,social,information,graph,community,time,detection,structure,methods
+2018,Computer Science,cs.SI,Social & Information Networks,1496,networks,social,network,information,graph,news,media,nodes,users,real
+2019,Computer Science,cs.SI,Social & Information Networks,1731,network,networks,social,graph,learning,node,information,nodes,community,users
+2020,Computer Science,cs.SI,Social & Information Networks,2295,graph,network,social,networks,information,covid,analysis,news,users,node
+2021,Computer Science,cs.SI,Social & Information Networks,1880,network,graph,networks,information,social,nodes,node,time,community,learning
+2022,Computer Science,cs.SI,Social & Information Networks,1725,network,networks,social,graph,information,learning,community,media,methods,analysis
+2023,Computer Science,cs.SI,Social & Information Networks,1878,social,network,networks,graph,media,information,users,learning,analysis,methods
+2024,Computer Science,cs.SI,Social & Information Networks,2035,graph,information,social,network,networks,user,content,learning,media,graphs
+2025,Computer Science,cs.SI,Social & Information Networks,1842,social,networks,network,graph,learning,analysis,framework,real,media,influence
+2026,Computer Science,cs.SI,Social & Information Networks,370,social,networks,network,graph,media,online,across,community,dynamics,agents
+2015,Computer Science,cs.SE,Software Engineering,489,software,process,code,development,systems,system,time,analysis,framework,business
+2016,Computer Science,cs.SE,Software Engineering,537,software,code,development,requirements,systems,system,analysis,language,engineering,program
+2017,Computer Science,cs.SE,Software Engineering,773,software,systems,development,analysis,system,research,design,learning,code,applications
+2018,Computer Science,cs.SE,Software Engineering,1014,software,code,systems,test,development,tools,process,testing,analysis,source
+2019,Computer Science,cs.SE,Software Engineering,1187,software,code,test,systems,research,analysis,development,learning,testing,engineering
+2020,Computer Science,cs.SE,Software Engineering,1520,software,code,research,development,engineering,system,developers,process,testing,systems
+2021,Computer Science,cs.SE,Software Engineering,2165,code,software,systems,developers,system,test,learning,development,research,source
+2022,Computer Science,cs.SE,Software Engineering,1990,code,software,testing,test,systems,system,learning,source,research,developers
+2023,Computer Science,cs.SE,Software Engineering,2716,software,code,development,systems,testing,analysis,learning,system,developers,test
+2024,Computer Science,cs.SE,Software Engineering,3690,software,code,source,analysis,development,systems,language,developers,engineering,open
+2025,Computer Science,cs.SE,Software Engineering,5183,code,software,llms,language,generation,development,engineering,systems,framework,analysis
+2026,Computer Science,cs.SE,Software Engineering,1373,code,software,test,language,llms,real,agent,generation,engineering,agents
+2015,Computer Science,cs.SD,Sound,132,speech,audio,features,acoustic,performance,algorithm,signal,noise,time,system
+2016,Computer Science,cs.SD,Sound,301,audio,speech,recognition,time,speaker,sound,system,acoustic,learning,music
+2017,Computer Science,cs.SD,Sound,446,speech,music,audio,deep,neural,training,network,learning,networks,features
+2018,Computer Science,cs.SD,Sound,838,speech,audio,speaker,neural,recognition,features,system,training,deep,acoustic
+2019,Computer Science,cs.SD,Sound,1252,speech,audio,recognition,performance,speaker,learning,network,neural,training,deep
+2020,Computer Science,cs.SD,Sound,1897,speech,speaker,performance,training,recognition,audio,learning,voice,dataset,deep
+2021,Computer Science,cs.SD,Sound,2210,speech,speaker,audio,learning,performance,multi,training,recognition,neural,acoustic
+2022,Computer Science,cs.SD,Sound,2681,speech,audio,speaker,performance,recognition,learning,training,propose,text,information
+2023,Computer Science,cs.SD,Sound,2754,speech,audio,text,speaker,recognition,music,training,performance,propose,acoustic
+2024,Computer Science,cs.SD,Sound,3160,speech,audio,training,speaker,performance,learning,propose,information,recognition,methods
+2025,Computer Science,cs.SD,Sound,3476,audio,speech,music,generation,quality,text,systems,language,methods,dataset
+2026,Computer Science,cs.SD,Sound,789,audio,speech,language,framework,acoustic,performance,recognition,music,across,generation
+2015,Computer Science,cs.SC,Symbolic Computation,91,algorithm,polynomial,polynomials,systems,algebraic,degree,linear,differential,algorithms,matrix
+2016,Computer Science,cs.SC,Symbolic Computation,133,algorithm,polynomial,algorithms,algebraic,matrix,polynomials,equations,computing,linear,number
+2017,Computer Science,cs.SC,Symbolic Computation,138,algorithm,polynomial,algorithms,systems,polynomials,linear,finite,degree,rational,given
+2018,Computer Science,cs.SC,Symbolic Computation,152,algorithm,algorithms,polynomial,polynomials,algebraic,linear,computing,systems,complexity,algebra
+2019,Computer Science,cs.SC,Symbolic Computation,174,algorithm,algorithms,polynomial,systems,linear,number,polynomials,equations,methods,symbolic
+2020,Computer Science,cs.SC,Symbolic Computation,214,polynomial,algorithm,algorithms,systems,linear,system,algebraic,learning,differential,real
+2021,Computer Science,cs.SC,Symbolic Computation,186,algorithm,systems,polynomial,symbolic,system,methods,computation,algorithms,functions,equations
+2022,Computer Science,cs.SC,Symbolic Computation,209,polynomial,algorithm,symbolic,systems,differential,package,matrix,computing,functions,algorithms
+2023,Computer Science,cs.SC,Symbolic Computation,229,symbolic,algorithm,polynomial,knowledge,systems,functions,linear,algebraic,learning,algorithms
+2024,Computer Science,cs.SC,Symbolic Computation,264,algorithm,symbolic,learning,systems,algebraic,polynomial,algorithms,computing,methods,system
+2025,Computer Science,cs.SC,Symbolic Computation,290,algorithm,symbolic,polynomial,systems,matrix,algorithms,time,linear,learning,algebraic
+2026,Computer Science,cs.SC,Symbolic Computation,83,symbolic,algorithm,algebraic,equations,framework,polynomial,system,algorithms,systems,differential
+2015,Computer Science,cs.SY,Systems & Control,0,,,,,,,,,,
+2016,Computer Science,cs.SY,Systems & Control,0,,,,,,,,,,
+2017,Computer Science,cs.SY,Systems & Control,0,,,,,,,,,,
+2018,Computer Science,cs.SY,Systems & Control,0,,,,,,,,,,
+2019,Computer Science,cs.SY,Systems & Control,0,,,,,,,,,,
+2020,Computer Science,cs.SY,Systems & Control,0,,,,,,,,,,
+2021,Computer Science,cs.SY,Systems & Control,0,,,,,,,,,,
+2022,Computer Science,cs.SY,Systems & Control,0,,,,,,,,,,
+2023,Computer Science,cs.SY,Systems & Control,0,,,,,,,,,,
+2024,Computer Science,cs.SY,Systems & Control,0,,,,,,,,,,
+2025,Computer Science,cs.SY,Systems & Control,0,,,,,,,,,,
+2026,Computer Science,cs.SY,Systems & Control,0,,,,,,,,,,
+2015,Statistics,stat.AP,Applications,806,time,analysis,regression,methods,test,bayesian,random,process,estimation,distribution
+2016,Statistics,stat.AP,Applications,952,methods,analysis,time,regression,missing,bayesian,test,functional,estimation,propose
+2017,Statistics,stat.AP,Applications,1127,analysis,time,bayesian,distribution,methods,estimation,statistical,sample,regression,algorithm
+2018,Statistics,stat.AP,Applications,1322,methods,distribution,time,bayesian,analysis,effect,effects,estimation,random,number
+2019,Statistics,stat.AP,Applications,1723,time,analysis,methods,bayesian,performance,effect,treatment,random,risk,network
+2020,Statistics,stat.AP,Applications,2195,covid,analysis,methods,regression,time,learning,bayesian,level,propose,power
+2021,Statistics,stat.AP,Applications,2015,analysis,methods,time,bayesian,distribution,regression,framework,spatial,treatment,case
+2022,Statistics,stat.AP,Applications,1940,time,system,analysis,network,methods,learning,treatment,statistical,modeling,prediction
+2023,Statistics,stat.AP,Applications,2000,analysis,time,methods,framework,risk,performance,design,statistical,research,information
+2024,Statistics,stat.AP,Applications,2180,analysis,time,methods,risk,estimation,studies,research,framework,learning,real
+2025,Statistics,stat.AP,Applications,2577,time,analysis,framework,methods,network,performance,distribution,effects,real,sample
+2026,Statistics,stat.AP,Applications,551,framework,time,bayesian,performance,methods,analysis,across,health,effects,estimation
+2015,Statistics,stat.CO,Computation,500,algorithm,methods,algorithms,time,bayesian,estimation,likelihood,sampling,posterior,density
+2016,Statistics,stat.CO,Computation,457,methods,algorithm,monte,carlo,inference,estimation,time,sampling,distribution,bayesian
+2017,Statistics,stat.CO,Computation,603,bayesian,algorithm,time,methods,algorithms,inference,sampling,random,estimation,monte
+2018,Statistics,stat.CO,Computation,578,algorithm,bayesian,methods,inference,time,algorithms,estimation,regression,sampling,monte
+2019,Statistics,stat.CO,Computation,731,algorithm,methods,bayesian,distribution,time,estimation,parameters,sampling,dimensional,algorithms
+2020,Statistics,stat.CO,Computation,861,methods,algorithm,package,bayesian,inference,algorithms,distribution,state,sampling,time
+2021,Statistics,stat.CO,Computation,842,algorithm,algorithms,methods,bayesian,time,sampling,monte,carlo,inference,distributions
+2022,Statistics,stat.CO,Computation,831,algorithm,methods,estimation,bayesian,distribution,inference,random,monte,carlo,sampling
+2023,Statistics,stat.CO,Computation,741,methods,time,bayesian,inference,distribution,likelihood,algorithm,estimation,parameters,monte
+2024,Statistics,stat.CO,Computation,943,methods,distribution,monte,carlo,bayesian,algorithm,inference,estimation,distributions,package
+2025,Statistics,stat.CO,Computation,1003,methods,time,bayesian,framework,estimation,analysis,algorithm,sampling,inference,monte
+2026,Statistics,stat.CO,Computation,234,estimation,framework,inference,bayesian,methods,regression,linear,gaussian,algorithm,sampling
+2015,Statistics,stat.ME,Methodology,1271,analysis,methods,time,estimation,distribution,linear,dimensional,sample,test,matrix
+2016,Statistics,stat.ME,Methodology,1414,methods,analysis,time,estimation,distribution,sample,regression,random,functional,inference
+2017,Statistics,stat.ME,Methodology,1679,analysis,estimation,methods,sample,dimensional,gaussian,propose,number,distribution,time
+2018,Statistics,stat.ME,Methodology,1776,time,methods,regression,bayesian,analysis,propose,inference,estimation,distribution,effects
+2019,Statistics,stat.ME,Methodology,2173,methods,analysis,bayesian,distribution,estimation,regression,effects,time,propose,number
+2020,Statistics,stat.ME,Methodology,2818,methods,regression,time,propose,estimation,studies,analysis,test,sample,bayesian
+2021,Statistics,stat.ME,Methodology,3015,methods,analysis,propose,treatment,inference,test,estimation,bayesian,studies,regression
+2022,Statistics,stat.ME,Methodology,3235,time,methods,estimation,treatment,effects,causal,propose,bayesian,inference,algorithm
+2023,Statistics,stat.ME,Methodology,3486,distribution,regression,causal,estimation,time,function,methods,propose,analysis,effect
+2024,Statistics,stat.ME,Methodology,3894,methods,estimation,time,regression,treatment,analysis,inference,sample,selection,propose
+2025,Statistics,stat.ME,Methodology,4498,treatment,analysis,methods,estimation,causal,framework,regression,time,bayesian,inference
+2026,Statistics,stat.ME,Methodology,1100,inference,estimation,framework,regression,methods,studies,causal,effects,sample,distribution
+2015,Statistics,stat.ML,Machine Learning,1823,learning,algorithm,linear,methods,algorithms,inference,propose,kernel,local,random
+2016,Statistics,stat.ML,Machine Learning,2643,learning,methods,algorithm,neural,propose,features,training,classification,analysis,machine
+2017,Statistics,stat.ML,Machine Learning,4052,learning,methods,networks,performance,algorithm,network,time,deep,propose,algorithms
+2018,Statistics,stat.ML,Machine Learning,8396,learning,deep,methods,neural,network,networks,performance,tasks,clustering,information
+2019,Statistics,stat.ML,Machine Learning,12751,learning,neural,deep,classification,training,networks,propose,performance,network,methods
+2020,Statistics,stat.ML,Machine Learning,12768,learning,neural,training,networks,propose,methods,time,framework,performance,graph
+2021,Statistics,stat.ML,Machine Learning,5228,learning,algorithms,propose,algorithm,function,methods,training,networks,graph,neural
+2022,Statistics,stat.ML,Machine Learning,4989,learning,algorithm,methods,neural,networks,training,time,propose,optimization,network
+2023,Statistics,stat.ML,Machine Learning,5332,learning,neural,networks,distribution,gradient,regression,time,methods,propose,optimization
+2024,Statistics,stat.ML,Machine Learning,5908,learning,methods,training,distribution,analysis,algorithm,propose,performance,causal,estimation
+2025,Statistics,stat.ML,Machine Learning,6391,learning,methods,framework,performance,neural,distribution,time,algorithm,networks,training
+2026,Statistics,stat.ML,Machine Learning,1442,learning,framework,distribution,time,training,across,inference,uncertainty,methods,performance
+2015,Statistics,stat.OT,Other Statistics,75,statistics,statistical,research,distribution,analysis,methods,university,science,probability,information
+2016,Statistics,stat.OT,Other Statistics,70,statistics,process,science,statistical,analysis,distribution,procedure,probability,some,testing
+2017,Statistics,stat.OT,Other Statistics,95,analysis,statistical,statistics,learning,students,science,distribution,probability,estimation,random
+2018,Statistics,stat.OT,Other Statistics,108,statistical,analysis,time,probability,distribution,methods,statistics,scientific,science,algorithm
+2019,Statistics,stat.OT,Other Statistics,148,methods,statistical,statistics,analysis,bayesian,time,inference,provide,estimation,random
+2020,Statistics,stat.OT,Other Statistics,166,probability,statistical,statistics,bayesian,science,theory,methods,analysis,test,effect
+2021,Statistics,stat.OT,Other Statistics,130,analysis,methods,statistical,distribution,time,bayesian,series,probability,science,some
+2022,Statistics,stat.OT,Other Statistics,120,methods,probability,statistical,distribution,time,inference,analysis,science,network,statistics
+2023,Statistics,stat.OT,Other Statistics,135,statistics,analysis,statistical,science,research,information,probability,time,other,provide
+2024,Statistics,stat.OT,Other Statistics,130,analysis,science,research,methods,framework,statistical,statistics,information,time,network
+2025,Statistics,stat.OT,Other Statistics,186,analysis,methods,statistical,learning,research,causal,across,performance,framework,inference
+2026,Statistics,stat.OT,Other Statistics,46,analysis,studies,probability,uncertainty,bayesian,statistics,value,inference,framework,methods
+2015,Statistics,stat.TH,Statistics Theory,0,,,,,,,,,,
+2016,Statistics,stat.TH,Statistics Theory,0,,,,,,,,,,
+2017,Statistics,stat.TH,Statistics Theory,0,,,,,,,,,,
+2018,Statistics,stat.TH,Statistics Theory,0,,,,,,,,,,
+2019,Statistics,stat.TH,Statistics Theory,0,,,,,,,,,,
+2020,Statistics,stat.TH,Statistics Theory,0,,,,,,,,,,
+2021,Statistics,stat.TH,Statistics Theory,0,,,,,,,,,,
+2022,Statistics,stat.TH,Statistics Theory,0,,,,,,,,,,
+2023,Statistics,stat.TH,Statistics Theory,0,,,,,,,,,,
+2024,Statistics,stat.TH,Statistics Theory,0,,,,,,,,,,
+2025,Statistics,stat.TH,Statistics Theory,0,,,,,,,,,,
+2026,Statistics,stat.TH,Statistics Theory,0,,,,,,,,,,

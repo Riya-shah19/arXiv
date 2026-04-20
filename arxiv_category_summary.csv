@@ -1,0 +1,50 @@
+Category,Subcategory Code,Subcategory Name,Document Count
+Computer Science,cs.AI,Artificial Intelligence,168181
+Computer Science,cs.CL,Computation & Language,104601
+Computer Science,cs.CC,Computational Complexity,12592
+Computer Science,cs.CV,Computer Vision,185665
+Computer Science,cs.CY,Computers & Society,27354
+Computer Science,cs.CR,Cryptography & Security,46546
+Computer Science,cs.DS,Data Structures & Algorithms,28222
+Computer Science,cs.DB,Databases,11369
+Computer Science,cs.DL,Digital Libraries,5870
+Computer Science,cs.DM,Discrete Mathematics,15372
+Computer Science,cs.DC,Distributed Computing,27724
+Computer Science,cs.ET,Emerging Technologies,6962
+Computer Science,cs.FL,Formal Languages,5866
+Computer Science,cs.GT,Computer Science & Game Theory,14333
+Computer Science,cs.GL,General Literature,229
+Computer Science,cs.GR,Graphics,8832
+Computer Science,cs.AR,Hardware Architecture,7791
+Computer Science,cs.HC,Human-Computer Interaction,29041
+Computer Science,cs.IR,Information Retrieval,24351
+Computer Science,cs.IT,Information Theory,53521
+Computer Science,cs.LG,Machine Learning,258190
+Computer Science,cs.LO,Logic in Computer Science,18901
+Computer Science,cs.MS,Mathematical Software,2580
+Computer Science,cs.MA,Multiagent Systems,11553
+Computer Science,cs.MM,Multimedia,9230
+Computer Science,cs.NI,Networking & Internet Architecture,26796
+Computer Science,cs.NE,Neural & Evolutionary Computing,17322
+Computer Science,cs.NA,Numerical Analysis,0
+Computer Science,cs.OS,Operating Systems,1283
+Computer Science,cs.OH,Other Computer Science,2306
+Computer Science,cs.PF,Performance,5068
+Computer Science,cs.PL,Programming Languages,9537
+Computer Science,cs.RO,Robotics,50916
+Computer Science,cs.SI,Social & Information Networks,23069
+Computer Science,cs.SE,Software Engineering,25302
+Computer Science,cs.SD,Sound,20214
+Computer Science,cs.SC,Symbolic Computation,3061
+Computer Science,cs.SY,Systems & Control,0
+Statistics,stat.AP,Applications,22783
+Statistics,stat.CO,Computation,9966
+Statistics,stat.ME,Methodology,34634
+Statistics,stat.ML,Machine Learning,76415
+Statistics,stat.OT,Other Statistics,1629
+Statistics,stat.TH,Statistics Theory,0
+,,,
+--- SUMMARY ---,,,
+Computer Science,ALL,Total (Computer Science),1269750
+Statistics,ALL,Total (Statistics),145427
+COMBINED,ALL,Grand Total,1415177
