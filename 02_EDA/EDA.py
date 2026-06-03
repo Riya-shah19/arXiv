@@ -8,7 +8,7 @@ import os
 os.makedirs("plots", exist_ok=True)
 sns.set_theme(style="whitegrid", palette="muted")
 
-df = pd.read_csv("arxiv_monthly_counts.csv")
+df = pd.read_csv("C:\\Users\\riyas\\OneDrive\\ARXIV project\\01_data_collection\\arxiv_monthly_counts.csv")
 
 print("=" * 50)
 print("  DATASET OVERVIEW")
@@ -89,7 +89,7 @@ plt.show()
 
 # Plot 3 - Hearmap: CS subcategories * Year
 
-cs_pivot = (df[(df["field"]=="cs") & (df["year"]>=1991)]
+cs_pivot = (df[(df["field"]=="cs") & (df["year"]>=1991) & (df["year"]<=2025)]
             .groupby(["sub_field","year"])["paper_count"]
             .sum()
             .unstack("year")
@@ -100,7 +100,7 @@ sns.heatmap(cs_pivot, cmap="YlOrRd",
             linewidths=0.3,
             linecolor="white",
             cbar_kws={"label":"Paper Count"})
-plt.title("CS Subcategories × Year Heatmap (1991–2026)",
+plt.title("CS Subcategories × Year Heatmap (1991–2025)",
           fontsize=16, fontweight="bold")
 plt.xlabel("Year", fontsize=13)
 plt.ylabel("Subcategory", fontsize=13)
@@ -112,7 +112,7 @@ plt.show()
 
 # Plot 4 - Heatmap: Statistics subcategories * Year 
 
-stat_pivot = (df[(df["field"]=="stat") & (df["year"]>=1991)]
+stat_pivot = (df[(df["field"]=="stat") & (df["year"]>=1991) & (df["year"]<=2025)]
               .groupby(["sub_field","year"])["paper_count"]
               .sum()
               .unstack("year")
@@ -124,7 +124,7 @@ sns.heatmap(stat_pivot, cmap="YlOrRd",
             linecolor="white",
             annot=True, fmt=".0f",
             cbar_kws={"label":"Paper Count"})
-plt.title("Statistics Subcategories x Year Heatmap (1991-2026)",
+plt.title("Statistics Subcategories x Year Heatmap (1991-2025)",
           fontsize=16, fontweight="bold")
 plt.xlabel("Year", fontsize=13)
 plt.ylabel("Subcategory", fontsize=13)
@@ -136,7 +136,7 @@ plt.show()
 
 # Plot 5 - Heatmap: Physics subcategories * Year
 
-phys_pivot = (df[(df["field"]=="physics") & (df["year"]>=1991)]
+phys_pivot = (df[(df["field"]=="physics") & (df["year"]>=1991) & (df["year"]<=2025)]
               .groupby(["sub_field","year"])["paper_count"]
               .sum()
               .unstack("year")
@@ -147,7 +147,7 @@ sns.heatmap(phys_pivot, cmap="YlOrRd",
             linewidths=0.3,
             linecolor="white",
             cbar_kws={"label":"Paper Count"})
-plt.title("Physics Subcategories × Year Heatmap (1991–2026)",
+plt.title("Physics Subcategories × Year Heatmap (1991–2025)",
           fontsize=16, fontweight="bold")
 plt.xlabel("Year", fontsize=13)
 plt.ylabel("Subcategory", fontsize=13)
@@ -236,7 +236,7 @@ ax1.set_xlabel("Year", fontsize=11)
 ax1.set_ylabel("Total Papers", fontsize=11)
 ax1.legend(fontsize=10)
 ax1.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x,_: f"{int(x):,}"))
-ax1.set_xlim(1991, 2026)
+ax1.set_xlim(1991, 2025)
 sns.despine(ax=ax1)
  
 #  Right panel:
@@ -329,7 +329,7 @@ for field in ["cs","math","physics","stat","eess"]:
             marker="o",
             markersize=4)
 
-ax.set_title("Total arXiv Papers per Year — All 5 Fields (1991–2026)",
+ax.set_title("Total arXiv Papers per Year — All 5 Fields (1991–2025)",
              fontsize=15, fontweight="bold", pad=15)
 ax.set_xlabel("Year", fontsize=13)
 ax.set_ylabel("Total Papers", fontsize=13)
@@ -341,9 +341,9 @@ plt.tight_layout()
 plt.savefig("plots/plot8_all_fields_yearly.png", dpi=150, bbox_inches="tight")
 plt.show()
 
-# PLOT 9 — Mathematics Subcategories Heatmap (2010–2026)
+# PLOT 9 — Mathematics Subcategories Heatmap (2010–2025)
 
-math_pivot = (df[(df["field"] == "math") & (df["year"] >= 2010)]
+math_pivot = (df[(df["field"] == "math") & (df["year"]>=2010) & (df["year"]<=2025)]
               .groupby(["sub_field","year"])["paper_count"]
               .sum()
               .unstack("year")
@@ -358,7 +358,7 @@ sns.heatmap(math_pivot,
             cbar_kws={"label": "Paper Count"},
             ax=ax)
 
-ax.set_title("Mathematics Subcategories - Year Heatmap (2010-2026)",
+ax.set_title("Mathematics Subcategories - Year Heatmap (2010-2025)",
              fontsize=16, fontweight="bold", pad=15)
 ax.set_xlabel("Year", fontsize=13)
 ax.set_ylabel("Subcategory", fontsize=13)
@@ -486,7 +486,7 @@ for ax, (field, title, color) in zip(axes, fields_to_compare):
     ax.set_ylabel("Total Papers", fontsize=11)
     ax.yaxis.set_major_formatter(
         mticker.FuncFormatter(lambda x,_: f"{int(x):,}"))
-    ax.set_xlim(1991, 2026)
+    ax.set_xlim(1991, 2025)
     sns.despine(ax=ax)
 
 plt.tight_layout()
@@ -573,7 +573,7 @@ plt.show()
 
 cs_filtered = df[
     (df["field"] == "cs") &
-    (df["year"] >= 2010) &
+    (df["year"]>=2010) & (df["year"]<=2025) &
     (~df["sub_field"].isin(["cs.AI", "cs.LG"]))   # remove dominant fields
 ]
 
@@ -593,7 +593,7 @@ sns.heatmap(cs_filtered_pivot,
             ax=ax)
 
 ax.set_title(
-    "CS Subcategories - Year Heatmap (1991-2026)\n"
+    "CS Subcategories - Year Heatmap (1991-2025)\n"
     "[ cs.AI and cs.LG removed for better visibility ]",
     fontsize=15, fontweight="bold", pad=15
 )
@@ -610,7 +610,7 @@ plt.show()
 
 stat_filtered = df[
     (df["field"] == "stat") &
-    (df["year"] >= 2010) &
+    (df["year"]>=2010) & (df["year"]<=2025) &
     (~df["sub_field"].isin(["stat.ML"]))   # remove dominant field
 ]
 
@@ -631,7 +631,7 @@ sns.heatmap(stat_filtered_pivot,
             ax=ax)
 
 ax.set_title(
-    "Statistics Subcategories - Year Heatmap (1991-2026)\n"
+    "Statistics Subcategories - Year Heatmap (1991-2025)\n"
     "[ stat.ML removed for better visibility ]",
     fontsize=15, fontweight="bold", pad=15
 )
@@ -642,3 +642,79 @@ ax.tick_params(axis="y", rotation=0)
 plt.tight_layout()
 plt.savefig("plots/plot17_stat_heatmap_filtered.png", dpi=150, bbox_inches="tight")
 plt.show()
+
+# ─────────────────────────────────────────────────────────────────────────────
+# PLOT — Top 18 Fastest Growing Subcategories Across ALL 5 Fields
+# Compares average papers per month: 2015–2019 vs 2020–2024
+# ─────────────────────────────────────────────────────────────────────────────
+
+import matplotlib.patches as mpatches
+
+# Filter two time periods
+early  = df[(df["year"] >= 2015) & (df["year"] <= 2019)]
+recent = df[(df["year"] >= 2020) & (df["year"] <= 2024)]
+
+# Average papers per month per subcategory in each period
+early_avg  = early.groupby(["field","sub_field"])["paper_count"].mean()
+recent_avg = recent.groupby(["field","sub_field"])["paper_count"].mean()
+
+# Calculate growth percentage
+growth = pd.concat([early_avg, recent_avg], axis=1, keys=["early","recent"])
+growth = growth.dropna()
+growth["growth_pct"] = ((growth["recent"] - growth["early"]) / growth["early"] * 100).round(1)
+growth = growth.reset_index()
+
+# Get top 15 across ALL fields
+top15 = growth.nlargest(15, "growth_pct").sort_values("growth_pct", ascending=True)
+
+# Colour per field
+field_colors = {
+    "cs"     : "#2196F3",
+    "stat"   : "#FF9800",
+    "physics": "#4CAF50",
+    "math"   : "#9C27B0",
+    "eess"   : "#E91E63",
+}
+bar_colors = [field_colors.get(f, "#607D8B") for f in top15["field"]]
+
+fig, ax = plt.subplots(figsize=(16, 9))
+
+bars = ax.barh(top15["sub_field"], top15["growth_pct"],
+               color=bar_colors, edgecolor="white", height=0.65)
+
+# Add value labels and actual counts on each bar
+for bar, (_, row) in zip(bars, top15.iterrows()):
+    ax.text(
+        bar.get_width() + 2,
+        bar.get_y() + bar.get_height() / 2,
+        f"{row['growth_pct']:.0f}%  ({int(row['early']):,} → {int(row['recent']):,} avg/month)",
+        va="center", fontsize=9
+    )
+
+# Reference line at 100% (doubled)
+ax.axvline(x=100, color="gray", linestyle="--", linewidth=1, alpha=0.6)
+ax.text(101, -0.6, "100%\n(doubled)", color="gray", fontsize=8)
+
+# Legend for field colours
+legend_handles = [
+    mpatches.Patch(color=c, label=f.upper())
+    for f, c in field_colors.items()
+]
+ax.legend(handles=legend_handles, title="Field",
+          fontsize=10, loc="lower right")
+
+ax.set_title(
+    "Top 15 Fastest Growing Subcategories — All 5 Fields\n"
+    "(Average papers/month: 2015–2019 vs 2020–2024)",
+    fontsize=15, fontweight="bold", pad=15
+)
+ax.set_xlabel("Growth (%)", fontsize=13)
+ax.set_ylabel("Subcategory", fontsize=13)
+ax.set_xlim(0, top15["growth_pct"].max() * 1.4)
+ax.xaxis.set_major_formatter(
+    mticker.FuncFormatter(lambda x, _: f"{int(x)}%"))
+sns.despine()
+plt.tight_layout()
+plt.savefig("plots/plot_growth_all_fields.png", dpi=150, bbox_inches="tight")
+plt.show()
+print("✓ Growth rate plot (all fields) saved → plots/plot_growth_all_fields.png")

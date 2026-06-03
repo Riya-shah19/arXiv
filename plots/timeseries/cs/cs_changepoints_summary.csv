@@ -1,0 +1,34 @@
+sub_field,name,changepoint,avg_before,avg_after,change_pct,likely_cause
+cs.LG,Machine Learning,March 2012,11.2,1478.4,13105.8,AlexNet - Deep learning revolution
+cs.LG,Machine Learning,October 2016,52.7,2127.2,3938.1,Transformer paper published
+cs.LG,Machine Learning,June 2018,90.8,2487.1,2637.7,BERT / GPT-1 released
+cs.LG,Machine Learning,February 2020,195.2,2796.3,1332.7,COVID-19 research surge
+cs.LG,Machine Learning,January 2023,451.9,3300.1,630.3,GPT-4 / Generative AI boom
+cs.AI,Artificial Intelligence,February 2011,12.5,862.1,6795.7,AlexNet - Deep learning revolution
+cs.AI,Artificial Intelligence,July 2016,35.1,1295.1,3591.8,Transformer paper published
+cs.AI,Artificial Intelligence,March 2018,48.4,1523.6,3048.8,BERT / GPT-1 released
+cs.AI,Artificial Intelligence,April 2020,76.1,1935.6,2443.7,COVID-19 research surge
+cs.CV,Computer Vision,November 2011,8.6,519.2,5968.2,AlexNet - Deep learning revolution
+cs.CV,Computer Vision,October 2014,21.6,709.5,3179.4,GANs invented / Deep RL
+cs.CV,Computer Vision,June 2016,41.9,870.3,1976.8,Transformer paper published
+cs.CL,Computation & Language (NLP),July 2015,13.5,761.3,5552.5,GANs invented / Deep RL
+cs.CL,Computation & Language (NLP),January 2018,28.5,951.5,3242.0,BERT / GPT-1 released
+cs.CL,Computation & Language (NLP),April 2019,42.1,1073.0,2446.2,BERT / GPT-1 released
+cs.CL,Computation & Language (NLP),July 2020,65.9,1196.6,1717.1,COVID-19 research surge
+cs.CL,Computation & Language (NLP),August 2022,111.0,1519.1,1268.1,ChatGPT / LLM explosion
+cs.CR,Cryptography & Security,July 2009,7.3,223.2,2967.7,Financial crisis / Cloud computing
+cs.CR,Cryptography & Security,August 2016,27.1,345.8,1177.3,Transformer paper published
+cs.CR,Cryptography & Security,April 2018,35.3,394.2,1015.0,BERT / GPT-1 released
+cs.CR,Cryptography & Security,December 2019,51.1,439.3,759.5,BERT / GPT-1 released
+cs.CR,Cryptography & Security,January 2022,75.6,503.2,565.4,ChatGPT / LLM explosion
+cs.CR,Cryptography & Security,September 2023,97.4,582.0,497.4,GPT-4 / Generative AI boom
+cs.RO,Robotics,May 2016,11.8,399.8,3283.4,Transformer paper published
+cs.RO,Robotics,November 2018,28.9,499.9,1627.1,BERT / GPT-1 released
+cs.RO,Robotics,July 2020,50.7,577.6,1038.6,COVID-19 research surge
+cs.RO,Robotics,January 2023,97.6,721.2,639.2,GPT-4 / Generative AI boom
+cs.NE,Neural & Evolutionary Computing,June 2013,8.3,103.8,1153.1,AlexNet - Deep learning revolution
+cs.NE,Neural & Evolutionary Computing,December 2015,14.1,118.7,741.9,GANs invented / Deep RL
+cs.NE,Neural & Evolutionary Computing,November 2018,25.4,132.8,423.2,BERT / GPT-1 released
+cs.SI,Social & Information Networks,September 2010,2.2,123.1,5516.8,Financial crisis / Cloud computing
+cs.SI,Social & Information Networks,August 2013,38.2,136.9,258.4,AlexNet - Deep learning revolution
+cs.SI,Social & Information Networks,January 2019,73.6,159.4,116.4,BERT / GPT-1 released

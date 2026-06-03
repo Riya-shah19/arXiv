@@ -1,0 +1,10 @@
+sub_field,name,changepoint,avg_before,avg_after,change_pct,likely_cause
+physics.data-an,Data Analysis and Statistics,September 2005,7.3,44.1,507.7,Unknown
+physics.data-an,Data Analysis and Statistics,April 2010,13.9,49.0,251.6,Large Hadron Collider operations begin
+physics.data-an,Data Analysis and Statistics,June 2019,24.8,59.7,140.4,First image of a black hole released
+physics.comp-ph,Computational Physics,August 2009,15.5,125.8,713.1,Large Hadron Collider operations begin
+physics.comp-ph,Computational Physics,July 2017,34.2,182.7,435.0,Gravitational waves confirmed — Nobel Prize
+physics.comp-ph,Computational Physics,October 2018,39.1,193.3,394.6,First image of a black hole released
+physics.comp-ph,Computational Physics,August 2024,68.6,247.7,261.3,AI applied to physics simulations surge
+physics.app-ph,Applied Physics,March 2017,1.2,212.0,17841.7,Gravitational waves confirmed — Nobel Prize
+physics.app-ph,Applied Physics,November 2018,65.3,229.8,251.9,First image of a black hole released
