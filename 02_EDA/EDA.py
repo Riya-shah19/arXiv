@@ -37,7 +37,7 @@ top10 = (df.groupby("sub_field")["paper_count"]
            .reset_index())
 print(top10.to_string(index=False))
 
-# Plot 1 - Total papers per year by field 
+# Plot - Total papers per year by field 
 
 yearly = df.groupby(["field","year"])["paper_count"].sum().reset_index()
 colors = {"cs":"#2196F3", "stat":"#FF9800", "physics":"#4CAF50"}
@@ -61,7 +61,7 @@ plt.tight_layout()
 plt.savefig("plots/plot1_yearly_trend.png", dpi=150)
 plt.show()
 
-# Plot 2 - Average papers per month (seasonal pattern)
+# Plot - Average papers per month (seasonal pattern)
 
 month_labels = ["Jan","Feb","Mar","Apr","May","Jun",
                 "Jul","Aug","Sep","Oct","Nov","Dec"]
@@ -87,7 +87,7 @@ plt.tight_layout()
 plt.savefig("plots/plot2_seasonal_pattern.png", dpi=150)
 plt.show()
 
-# Plot 3 - Hearmap: CS subcategories * Year
+# Plot - Hearmap: CS subcategories * Year
 
 cs_pivot = (df[(df["field"]=="cs") & (df["year"]>=1991) & (df["year"]<=2025)]
             .groupby(["sub_field","year"])["paper_count"]
@@ -110,7 +110,7 @@ plt.tight_layout()
 plt.savefig("plots/plot3_cs_heatmap.png", dpi=150)
 plt.show()
 
-# Plot 4 - Heatmap: Statistics subcategories * Year 
+# Plot - Heatmap: Statistics subcategories * Year 
 
 stat_pivot = (df[(df["field"]=="stat") & (df["year"]>=1991) & (df["year"]<=2025)]
               .groupby(["sub_field","year"])["paper_count"]
@@ -134,7 +134,7 @@ plt.tight_layout()
 plt.savefig("plots/plot4_stat_heatmap.png", dpi=150)
 plt.show()
 
-# Plot 5 - Heatmap: Physics subcategories * Year
+# Plot - Heatmap: Physics subcategories * Year
 
 phys_pivot = (df[(df["field"]=="physics") & (df["year"]>=1991) & (df["year"]<=2025)]
               .groupby(["sub_field","year"])["paper_count"]
@@ -157,7 +157,7 @@ plt.tight_layout()
 plt.savefig("plots/plot5_physics_heatmap.png", dpi=150)
 plt.show()
 
-# Plot 6 - Top 10 fastest growing subcategories
+# Plot - Top 10 fastest growing subcategories
 
 early  = df[(df["year"] >= 2015) & (df["year"] <= 2019)]
 recent = df[(df["year"] >= 2020) & (df["year"] <= 2024)]
@@ -203,7 +203,7 @@ plt.tight_layout()
 plt.savefig("plots/plot6_growth_rate.png", dpi=150)
 plt.show()
 
-# Plot 7 - CS vs Physics comparison 
+# Plot - CS vs Physics comparison 
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(18, 7))
 fig.suptitle("Computer Science vs Physics — arXiv Paper Comparison",
@@ -304,7 +304,7 @@ plt.tight_layout()
 plt.savefig("plots/plot7_cs_vs_physics.png", dpi=150, bbox_inches="tight")
 plt.show()
 
-# PLOT 8 — All 5 Fields: Yearly Trend
+# PLOT - All 5 Fields: Yearly Trend
 
 yearly = df.groupby(["field","year"])["paper_count"].sum().reset_index()
 
@@ -341,7 +341,7 @@ plt.tight_layout()
 plt.savefig("plots/plot8_all_fields_yearly.png", dpi=150, bbox_inches="tight")
 plt.show()
 
-# PLOT 9 — Mathematics Subcategories Heatmap (2010–2025)
+# PLOT - Mathematics Subcategories Heatmap (2010–2025)
 
 math_pivot = (df[(df["field"] == "math") & (df["year"]>=2010) & (df["year"]<=2025)]
               .groupby(["sub_field","year"])["paper_count"]
@@ -368,7 +368,7 @@ plt.tight_layout()
 plt.savefig("plots/plot9_math_heatmap.png", dpi=150, bbox_inches="tight")
 plt.show()
 
-# PLOT 10 — EESS Subcategories Yearly Trend
+# PLOT - EESS Subcategories Yearly Trend
 
 eess_yearly = (df[df["field"] == "eess"]
                .groupby(["sub_field","year"])["paper_count"]
@@ -413,7 +413,7 @@ plt.tight_layout()
 plt.savefig("plots/plot10_eess_yearly.png", dpi=150, bbox_inches="tight")
 plt.show()
 
-# PLOT 11 — Top 10 Mathematics Subcategories by Total Papers
+# PLOT - Top 10 Mathematics Subcategories by Total Papers
 
 math_names = {
     "math.AC":"Commutative Algebra",   "math.AG":"Algebraic Geometry",
@@ -462,7 +462,7 @@ plt.tight_layout()
 plt.savefig("plots/plot11_math_top10.png", dpi=150, bbox_inches="tight")
 plt.show()
 
-# PLOT 12 — CS vs Math vs EESS Side by Side Comparison
+# PLOT - CS vs Math vs EESS Side by Side Comparison
 
 fig, axes = plt.subplots(1, 3, figsize=(20, 6))
 fig.suptitle("CS vs Mathematics vs EESS — Yearly Growth Comparison",
@@ -494,7 +494,7 @@ plt.savefig("plots/plot12_cs_math_eess_comparison.png",
             dpi=150, bbox_inches="tight")
 plt.show()
 
-# PLOT 13 — EESS Heatmap: Subcategories × Year
+# PLOT - EESS Heatmap: Subcategories × Year
 
 eess_pivot = (df[df["field"] == "eess"]
               .groupby(["sub_field","year"])["paper_count"]
@@ -521,9 +521,9 @@ ax.tick_params(axis="y", rotation=0)
 plt.tight_layout()
 plt.savefig("plots/plot13_eess_heatmap.png", dpi=150, bbox_inches="tight")
 plt.show()
-print("✓ Plot 13 saved")
+print(" Plot 13 saved")
 
-# PLOT 14 — Pie Chart: Share of Total Papers by Field
+# PLOT - Pie Chart: Share of Total Papers by Field
 
 field_totals = (df.groupby("field")["paper_count"]
                   .sum()
@@ -569,7 +569,7 @@ plt.tight_layout()
 plt.savefig("plots/plot14_field_share_pie.png", dpi=150, bbox_inches="tight")
 plt.show()
 
-# PLOT 15 — CS Heatmap WITHOUT cs.AI and cs.LG (better visibility)
+# PLOT - CS Heatmap WITHOUT cs.AI and cs.LG (better visibility)
 
 cs_filtered = df[
     (df["field"] == "cs") &
@@ -606,7 +606,7 @@ plt.savefig("plots/plot16_cs_heatmap_filtered.png", dpi=150, bbox_inches="tight"
 plt.show()
 
 
-# PLOT 17 — Statistics Heatmap WITHOUT stat.ML (better visibility)
+# PLOT - Statistics Heatmap WITHOUT stat.ML (better visibility)
 
 stat_filtered = df[
     (df["field"] == "stat") &
@@ -717,4 +717,4 @@ sns.despine()
 plt.tight_layout()
 plt.savefig("plots/plot_growth_all_fields.png", dpi=150, bbox_inches="tight")
 plt.show()
-print("✓ Growth rate plot (all fields) saved → plots/plot_growth_all_fields.png")
+print("Growth rate plot (all fields) saved → plots/plot_growth_all_fields.png")

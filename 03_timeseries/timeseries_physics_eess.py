@@ -3,18 +3,6 @@ timeseries_physics_eess.py
 ==========================
 Time Series Analysis + Changepoint Detection
 Fields: Physics and Electrical Engineering (EESS)
-
-Lighter analysis than CS, Stats and Maths:
-    - Overall time series for each field
-    - Decomposition for each field
-    - Changepoint detection for each field
-    - 3 key subcategories for Physics
-    - All 4 subcategories for EESS (only 4 exist)
-
-Why lighter?
-    Physics and EESS are less central to the AI/data science
-    dissertation theme. They provide useful comparison and
-    context but do not need the same depth as CS and Maths.
 """
 
 import os
@@ -41,11 +29,11 @@ os.makedirs("plots/timeseries/eess",    exist_ok=True)
 # ─────────────────────────────────────────────────────────────────────────────
 
 PHYSICS_EVENTS = {
-    1991: "arXiv launched — physics was first field",
+    1991: "arXiv launched - physics was first field",
     2008: "Large Hadron Collider operations begin",
     2012: "Higgs Boson discovered at CERN",
     2015: "LIGO detects gravitational waves",
-    2016: "Gravitational waves confirmed — Nobel Prize",
+    2016: "Gravitational waves confirmed - Nobel Prize",
     2019: "First image of a black hole released",
     2020: "COVID-19 research surge",
     2022: "James Webb Space Telescope launched",
@@ -54,19 +42,19 @@ PHYSICS_EVENTS = {
 
 EESS_EVENTS = {
     1991: "arXiv launched",
-    2012: "Deep learning revolution — image processing",
+    2012: "Deep learning revolution - image processing",
     2014: "Deep learning applied to speech recognition",
-    2017: "Transformer — NLP and signal processing",
+    2017: "Transformer - NLP and signal processing",
     2018: "WaveNet and neural audio synthesis",
-    2020: "COVID — remote communication research surge",
-    2022: "Diffusion models — image and audio generation",
+    2020: "COVID - remote communication research surge",
+    2022: "Diffusion models - image and audio generation",
     2023: "Large multimodal models boom",
 }
 
 # ─────────────────────────────────────────────────────────────────────────────
 # KEY SUBCATEGORIES
-# Physics — 3 most relevant to data science theme
-# EESS    — all 4 (only 4 exist)
+# Physics - 3 most relevant to data science theme
+# EESS    - all 4 (only 4 exist)
 # ─────────────────────────────────────────────────────────────────────────────
 
 PHYSICS_SUBCATS = {
@@ -164,7 +152,7 @@ def plot_decomposition(ts, title, color, save_path):
     plt.tight_layout()
     plt.savefig(save_path, dpi=150, bbox_inches="tight")
     plt.close()
-    print(f"  ✓ Decomposition saved → {save_path}")
+    print(f" Decomposition saved -> {save_path}")
 
 
 def plot_changepoints(ts_monthly, changepoint_dates,
@@ -172,8 +160,8 @@ def plot_changepoints(ts_monthly, changepoint_dates,
                       events, save_path):
     """
     Time series with changepoint lines and event labels.
-    Top panel    → series + date labels
-    Bottom strip → event labels
+    Top panel    -> series + date labels
+    Bottom strip -> event labels
     """
     fig, (ax, ax_labels) = plt.subplots(
         2, 1, figsize=(20, 9),
@@ -248,7 +236,7 @@ def plot_changepoints(ts_monthly, changepoint_dates,
     plt.tight_layout(h_pad=0)
     plt.savefig(save_path, dpi=150, bbox_inches="tight")
     plt.close()
-    print(f"  ✓ Changepoint plot saved → {save_path}")
+    print(f"  Changepoint plot saved -> {save_path}")
 
 
 def run_full_analysis(df, field, field_label,
@@ -284,7 +272,7 @@ def run_full_analysis(df, field, field_label,
     print(f"  Total papers       : {rows['paper_count'].sum():,}")
 
     # ── Raw time series ───────────────────────────────────
-    print(f"\n  PART 1 — Raw Time Series")
+    print(f"\n  PART 1 - Raw Time Series")
     ts, monthly = prepare_monthly_series(df, field=field)
 
     fig, ax = plt.subplots(figsize=(18, 6))
@@ -296,7 +284,7 @@ def run_full_analysis(df, field, field_label,
             color=color, linewidth=2.5, linestyle="--",
             label="12-month rolling average")
     ax.set_title(
-        f"{field_label} — Monthly Paper Submissions (1991–2025)",
+        f"{field_label} - Monthly Paper Submissions (1991-2025)",
         fontsize=15, fontweight="bold", pad=15)
     ax.set_xlabel("Date", fontsize=13)
     ax.set_ylabel("Papers per Month", fontsize=13)
@@ -308,31 +296,31 @@ def run_full_analysis(df, field, field_label,
     plt.savefig(f"{output_folder}/{field}_overall_raw.png",
                 dpi=150, bbox_inches="tight")
     plt.close()
-    print(f"  ✓ Raw time series saved")
+    print(f"  Raw time series saved")
 
     # ── Decomposition ─────────────────────────────────────
-    print(f"\n  PART 2 — Decomposition")
+    print(f"\n  PART 2 - Decomposition")
     plot_decomposition(
         ts,
-        title=f"{field_label} — Time Series Decomposition\n"
+        title=f"{field_label} - Time Series Decomposition\n"
               f"Observed | Trend | Seasonality | Residual",
         color=color,
         save_path=f"{output_folder}/{field}_overall_decomposition.png"
     )
 
     # ── Overall changepoints ───────────────────────────────
-    print(f"\n  PART 3 — Changepoint Detection (Overall)")
+    print(f"\n  PART 3 - Changepoint Detection (Overall)")
     cp_dates, _ = detect_changepoints(ts, pen=pen_overall)
 
     print(f"  Changepoints detected: {len(cp_dates)}")
     for cp in cp_dates:
         event = find_closest_event(cp.year, events)
-        print(f"    → {cp.strftime('%B %Y')}  "
+        print(f"    -> {cp.strftime('%B %Y')}  "
               f"|  {event or 'No known event nearby'}")
 
     plot_changepoints(
         monthly, cp_dates,
-        title=f"{field_label} — Changepoint Detection (1991–2025)\n"
+        title=f"{field_label} - Changepoint Detection (1991-2025)\n"
               f"Red dashed lines show detected structural breaks",
         color=color,
         label_color=label_color,
@@ -341,8 +329,8 @@ def run_full_analysis(df, field, field_label,
     )
 
     # Summary
-    print(f"\n  CHANGEPOINT SUMMARY — {field_label.upper()}")
-    print("  " + "─"*55)
+    print(f"\n  CHANGEPOINT SUMMARY - {field_label.upper()}")
+    print("  " + "-"*55)
     for i, cp in enumerate(cp_dates, 1):
         before = monthly[monthly["date"] < cp]["paper_count"].mean()
         after  = monthly[monthly["date"] >= cp]["paper_count"].mean()
@@ -355,13 +343,13 @@ def run_full_analysis(df, field, field_label,
         print(f"    Likely cause : {event or 'Unknown'}")
 
     # ── Key subcategories ──────────────────────────────────
-    print(f"\n  PART 4 — Key Subcategories")
+    print(f"\n  PART 4 - Key Subcategories")
     print(f"  Analysing {len(subcats)} subcategories:")
     for sub, name in subcats.items():
-        print(f"    → {sub} — {name}")
+        print(f"    -> {sub} - {name}")
 
     for subcat, name in subcats.items():
-        print(f"\n  Processing: {subcat} — {name}")
+        print(f"\n  Processing: {subcat} - {name}")
 
         try:
             ts_sub, monthly_sub = prepare_monthly_series(
@@ -369,13 +357,13 @@ def run_full_analysis(df, field, field_label,
 
             if (len(monthly_sub) < 24 or
                     monthly_sub["paper_count"].sum() < 50):
-                print(f"    ⚠ Not enough data — skipping")
+                print(f"  Not enough data - skipping")
                 continue
 
             # Decomposition
             plot_decomposition(
                 ts_sub,
-                title=f"{subcat} — {name}\n"
+                title=f"{subcat} - {name}\n"
                       f"Time Series Decomposition",
                 color=color,
                 save_path=(f"{output_folder}/"
@@ -389,13 +377,13 @@ def run_full_analysis(df, field, field_label,
             print(f"    Changepoints: {len(cp_sub)}")
             for cp in cp_sub:
                 event = find_closest_event(cp.year, events)
-                print(f"      → {cp.strftime('%B %Y')} | "
+                print(f"     -> {cp.strftime('%B %Y')} | "
                       f"{event or 'No known event'}")
 
             plot_changepoints(
                 monthly_sub, cp_sub,
-                title=f"{subcat} — {name}\n"
-                      f"Changepoint Detection (1991–2025)",
+                title=f"{subcat} - {name}\n"
+                      f"Changepoint Detection (1991-2025)",
                 color=color,
                 label_color=label_color,
                 events=events,
@@ -422,17 +410,17 @@ def run_full_analysis(df, field, field_label,
                     "likely_cause": event or "Unknown",
                 })
 
-            print(f"    ✓ Done")
+            print(f"   Done")
 
         except Exception as e:
-            print(f"    Error: {e} — skipping")
+            print(f"    Error: {e} - skipping")
             continue
 
     # ── Save summary CSV ───────────────────────────────────
     results_df = pd.DataFrame(all_results)
     csv_path   = f"{output_folder}/{field}_changepoints_summary.csv"
     results_df.to_csv(csv_path, index=False)
-    print(f"\n  ✓ Summary CSV saved → {csv_path}")
+    print(f"\n  Summary CSV saved -> {csv_path}")
     print(f"  Total changepoints : {len(results_df)}")
 
     if not results_df.empty:
@@ -449,7 +437,7 @@ def run_full_analysis(df, field, field_label,
 # ─────────────────────────────────────────────────────────────────────────────
 
 print("=" * 60)
-print("  PHYSICS + EESS — TIME SERIES ANALYSIS")
+print("  PHYSICS + EESS - TIME SERIES ANALYSIS")
 print("=" * 60)
 
 df = pd.read_csv(r"C:\Users\riyas\OneDrive\ARXIV project\01_data_collection\arxiv_monthly_counts.csv")
@@ -506,7 +494,7 @@ run_full_analysis(
 print("\n" + "=" * 60)
 print("  ALL DONE!")
 print("=" * 60)
-print("\n  📁 plots/timeseries/physics/")
+print("\n   plots/timeseries/physics/")
 print("     physics_overall_raw.png")
 print("     physics_overall_decomposition.png")
 print("     physics_overall_changepoints.png")
@@ -515,7 +503,7 @@ for sub in PHYSICS_SUBCATS:
     print(f"     {s}_decomposition.png")
     print(f"     {s}_changepoints.png")
 print("     physics_changepoints_summary.csv")
-print("\n  📁 plots/timeseries/eess/")
+print("\n   plots/timeseries/eess/")
 print("     eess_overall_raw.png")
 print("     eess_overall_decomposition.png")
 print("     eess_overall_changepoints.png")

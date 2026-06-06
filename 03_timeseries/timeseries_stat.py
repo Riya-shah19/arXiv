@@ -3,21 +3,6 @@ timeseries_stat.py
 ==================
 Time Series Analysis + Changepoint Detection
 Field: Statistics (stat.*)
-
-What this script does:
-    1. Plots overall Statistics monthly submissions (1991-2025)
-    2. Decomposes into trend, seasonality and noise
-    3. Detects changepoints on overall Statistics
-    4. Repeats for 4 key subcategories:
-       stat.ML, stat.ME, stat.TH, stat.AP
-
-Why Statistics is interesting:
-    Statistics has a unique story — it was a traditional
-    academic field until machine learning exploded and
-    suddenly stat.ML became one of the fastest growing
-    subcategories on all of arXiv. The boundary between
-    statistics and machine learning essentially dissolved
-    after 2012.
 """
 
 import os
@@ -49,15 +34,15 @@ os.makedirs("plots/timeseries/stat", exist_ok=True)
 KNOWN_EVENTS = {
     1991: "arXiv launched",
     2006: "R language became widely adopted",
-    2008: "Financial crisis — statistics in demand",
+    2008: "Financial crisis - statistics in demand",
     2010: "Big Data era begins",
     2012: "Deep learning revolution / Data science boom",
     2014: "Data science becomes mainstream career",
     2016: "Reproducibility crisis in statistics",
-    2017: "Transformer paper — ML meets statistics",
+    2017: "Transformer paper - ML meets statistics",
     2019: "Federated learning / Privacy statistics",
-    2020: "COVID-19 — statistics in global spotlight",
-    2022: "ChatGPT — LLM and Bayesian methods surge",
+    2020: "COVID-19 - statistics in global spotlight",
+    2022: "ChatGPT - LLM and Bayesian methods surge",
     2023: "Causal AI and uncertainty quantification boom",
 }
 
@@ -81,7 +66,7 @@ IMPORTANT_SUBCATS = {
 
 # ─────────────────────────────────────────────────────────────────────────────
 # HELPER FUNCTIONS
-# (same approach as CS — consistent methodology across all fields)
+# (same approach as CS - consistent methodology across all fields)
 # ─────────────────────────────────────────────────────────────────────────────
 
 def prepare_monthly_series(df, field=None, subfield=None):
@@ -166,15 +151,15 @@ def plot_decomposition(ts, title, color, save_path):
     plt.tight_layout()
     plt.savefig(save_path, dpi=150, bbox_inches="tight")
     plt.close()
-    print(f"  ✓ Decomposition saved → {save_path}")
+    print(f"  Decomposition saved → {save_path}")
 
 
 def plot_changepoints(ts_monthly, changepoint_dates,
                       title, color, save_path):
     """
     Plots time series with changepoint lines and event labels.
-    Top panel    → time series with date labels on changepoints
-    Bottom strip → event labels aligned to each changepoint
+    Top panel    -> time series with date labels on changepoints
+    Bottom strip -> event labels aligned to each changepoint
     """
     fig, (ax, ax_labels) = plt.subplots(
         2, 1, figsize=(20, 9),
@@ -250,7 +235,7 @@ def plot_changepoints(ts_monthly, changepoint_dates,
     plt.tight_layout(h_pad=0)
     plt.savefig(save_path, dpi=150, bbox_inches="tight")
     plt.close()
-    print(f"  ✓ Changepoint plot saved → {save_path}")
+    print(f"  Changepoint plot saved -> {save_path}")
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -258,7 +243,7 @@ def plot_changepoints(ts_monthly, changepoint_dates,
 # ─────────────────────────────────────────────────────────────────────────────
 
 print("=" * 60)
-print("  STATISTICS — TIME SERIES ANALYSIS")
+print("  STATISTICS - TIME SERIES ANALYSIS")
 print("=" * 60)
 
 df = pd.read_csv("C:\\Users\\riyas\\OneDrive\\ARXIV project\\01_data_collection\\arxiv_monthly_counts.csv")
@@ -267,7 +252,7 @@ stat_rows = df[df["field"] == "stat"]
 print(f"\n  Stat rows found    : {len(stat_rows):,}")
 print(f"  Stat subcategories : {stat_rows['sub_field'].nunique()}")
 print(f"  Year range         : "
-      f"{stat_rows['year'].min()} – {stat_rows['year'].max()}")
+      f"{stat_rows['year'].min()} - {stat_rows['year'].max()}")
 print(f"  Total papers       : {stat_rows['paper_count'].sum():,}")
 print(f"\n  Papers by subcategory:")
 for sub, total in (stat_rows.groupby("sub_field")["paper_count"]
@@ -275,19 +260,16 @@ for sub, total in (stat_rows.groupby("sub_field")["paper_count"]
                              .sort_values(ascending=False)
                              .items()):
     name = STAT_NAMES.get(sub, sub)
-    print(f"    {sub:<12} {name:<25} → {total:>8,}")
+    print(f"    {sub:<12} {name:<25} -> {total:>8,}")
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# PART 1 — OVERALL STATISTICS RAW TIME SERIES
-# What: all 6 stat subcategories combined as one series
-# Why:  shows the big picture of how statistics as a field
-#       grew and when it accelerated
+#  OVERALL STATISTICS RAW TIME SERIES
 # ─────────────────────────────────────────────────────────────────────────────
 
-print("\n" + "─"*60)
-print("  PART 1 — Overall Statistics Raw Time Series")
-print("─"*60)
+print("\n" + "-"*60)
+print("  PART 1 - Overall Statistics Raw Time Series")
+print("-"*60)
 
 stat_ts, stat_monthly = prepare_monthly_series(df, field="stat")
 
@@ -303,7 +285,7 @@ ax.plot(rolling.index, rolling.values,
         linestyle="--", label="12-month rolling average")
 
 ax.set_title(
-    "Statistics — Monthly Paper Submissions (1991–2025)",
+    "Statistics - Monthly Paper Submissions (1991-2025)",
     fontsize=15, fontweight="bold", pad=15)
 ax.set_xlabel("Date", fontsize=13)
 ax.set_ylabel("Papers per Month", fontsize=13)
@@ -315,23 +297,20 @@ plt.tight_layout()
 plt.savefig("plots/timeseries/stat/stat_overall_raw.png",
             dpi=150, bbox_inches="tight")
 plt.close()
-print("  ✓ Raw time series saved")
+print("  Raw time series saved")
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# PART 2 — DECOMPOSITION OF OVERALL STATISTICS
-# What: splits overall stat series into trend, seasonal, noise
-# Why:  statistics has a very clear seasonal pattern because
-#       academic statistics conferences follow a strict calendar
+# DECOMPOSITION OF OVERALL STATISTICS
 # ─────────────────────────────────────────────────────────────────────────────
 
-print("\n" + "─"*60)
-print("  PART 2 — Decomposition")
-print("─"*60)
+print("\n" + "-"*60)
+print("  PART 2 - Decomposition")
+print("-"*60)
 
 plot_decomposition(
     stat_ts,
-    title="Statistics — Time Series Decomposition\n"
+    title="Statistics - Time Series Decomposition\n"
           "Observed | Trend | Seasonality | Residual",
     color="#FF9800",
     save_path="plots/timeseries/stat/stat_overall_decomposition.png"
@@ -339,35 +318,32 @@ plot_decomposition(
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# PART 3 — CHANGEPOINT DETECTION ON OVERALL STATISTICS
-# What: finds structural breaks in overall stat submissions
-# Why:  statistics was directly impacted by the data science
-#       revolution — we expect changepoints around 2012 and 2020
+# CHANGEPOINT DETECTION ON OVERALL STATISTICS
 # ─────────────────────────────────────────────────────────────────────────────
 
-print("\n" + "─"*60)
-print("  PART 3 — Changepoint Detection (Overall Statistics)")
-print("─"*60)
+print("\n" + "-"*60)
+print("  PART 3 - Changepoint Detection (Overall Statistics)")
+print("-"*60)
 
 cp_dates, _ = detect_changepoints(stat_ts, pen=10)
 
 print(f"  Changepoints detected: {len(cp_dates)}")
 for cp in cp_dates:
     event = find_closest_event(cp.year, KNOWN_EVENTS)
-    print(f"    → {cp.strftime('%B %Y')}  "
+    print(f"    -> {cp.strftime('%B %Y')}  "
           f"|  {event or 'No known event nearby'}")
 
 plot_changepoints(
     stat_monthly, cp_dates,
-    title="Statistics — Changepoint Detection (1991–2025)\n"
+    title="Statistics - Changepoint Detection (1991-2025)\n"
           "Red dashed lines show detected structural breaks",
     color="#FF9800",
     save_path="plots/timeseries/stat/stat_overall_changepoints.png"
 )
 
 # Summary table
-print("\n  CHANGEPOINT SUMMARY — OVERALL STATISTICS")
-print("  " + "─"*55)
+print("\n  CHANGEPOINT SUMMARY - OVERALL STATISTICS")
+print("  " + "-"*55)
 for i, cp in enumerate(cp_dates, 1):
     before = stat_monthly[
         stat_monthly["date"] < cp]["paper_count"].mean()
@@ -383,28 +359,22 @@ for i, cp in enumerate(cp_dates, 1):
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# PART 4 — IMPORTANT SUBCATEGORIES
-# What: decomposition + changepoint for 4 key subcategories
-# Why:  each subcategory tells a different story:
-#   stat.ML  → the ML revolution impact on statistics
-#   stat.ME  → traditional academic methodology growth
-#   stat.TH  → theoretical statistics, links to math.ST
-#   stat.AP  → applied statistics, data science driven
+# IMPORTANT SUBCATEGORIES
 # ─────────────────────────────────────────────────────────────────────────────
 
-print("\n" + "─"*60)
-print("  PART 4 — Important Subcategories")
-print("─"*60)
+print("\n" + "-"*60)
+print("  PART 4 - Important Subcategories")
+print("-"*60)
 print(f"  Analysing {len(IMPORTANT_SUBCATS)} key subcategories:")
 for sub, name in IMPORTANT_SUBCATS.items():
-    print(f"    → {sub} — {name}")
+    print(f"    -> {sub} - {name}")
 
 all_results = []
 
 for subcat, name in IMPORTANT_SUBCATS.items():
-    print(f"\n  {'─'*50}")
-    print(f"  Processing: {subcat} — {name}")
-    print(f"  {'─'*50}")
+    print(f"\n  {'-'*50}")
+    print(f"  Processing: {subcat} - {name}")
+    print(f"  {'-'*50}")
 
     try:
         ts, monthly = prepare_monthly_series(df, subfield=subcat)
@@ -416,7 +386,7 @@ for subcat, name in IMPORTANT_SUBCATS.items():
         # Decomposition
         plot_decomposition(
             ts,
-            title=f"{subcat} — {name}\nTime Series Decomposition",
+            title=f"{subcat} - {name}\nTime Series Decomposition",
             color="#FF9800",
             save_path=(f"plots/timeseries/stat/"
                        f"{subcat.replace('.','_')}_decomposition.png")
@@ -428,14 +398,14 @@ for subcat, name in IMPORTANT_SUBCATS.items():
         print(f"    Changepoints found: {len(cp_dates_sub)}")
         for cp in cp_dates_sub:
             event = find_closest_event(cp.year, KNOWN_EVENTS)
-            print(f"      → {cp.strftime('%B %Y')} | "
+            print(f"  -> {cp.strftime('%B %Y')} | "
                   f"{event or 'No known event nearby'}")
 
         # Changepoint plot
         plot_changepoints(
             monthly, cp_dates_sub,
-            title=f"{subcat} — {name}\n"
-                  f"Changepoint Detection (1991–2025)",
+            title=f"{subcat} - {name}\n"
+                  f"Changepoint Detection (1991-2025)",
             color="#FF9800",
             save_path=(f"plots/timeseries/stat/"
                        f"{subcat.replace('.','_')}_changepoints.png")
@@ -459,20 +429,20 @@ for subcat, name in IMPORTANT_SUBCATS.items():
                 "likely_cause": event or "Unknown",
             })
 
-        print(f"    ✓ Done")
+        print(f" Done")
 
     except Exception as e:
-        print(f"    Error: {e} — skipping")
+        print(f"    Error: {e} - skipping")
         continue
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# PART 5 — SAVE SUMMARY TABLE
+#  SAVE SUMMARY TABLE
 # ─────────────────────────────────────────────────────────────────────────────
 
-print("\n" + "─"*60)
-print("  PART 5 — Summary Table")
-print("─"*60)
+print("\n" + "-"*60)
+print("  PART 5 - Summary Table")
+print("-"*60)
 
 results_df = pd.DataFrame(all_results)
 results_df.to_csv(
@@ -491,11 +461,11 @@ print("\n" + "="*60)
 print("  STATISTICS TIME SERIES COMPLETE!")
 print("="*60)
 print("\n  Files saved in: plots/timeseries/stat/")
-print("  📊 stat_overall_raw.png")
-print("  📊 stat_overall_decomposition.png")
-print("  📊 stat_overall_changepoints.png")
+print("   stat_overall_raw.png")
+print("   stat_overall_decomposition.png")
+print("   stat_overall_changepoints.png")
 for sub in IMPORTANT_SUBCATS:
     s = sub.replace(".","_")
-    print(f"  📊 {s}_decomposition.png")
-    print(f"  📊 {s}_changepoints.png")
-print("  📄 stat_changepoints_summary.csv")
+    print(f"   {s}_decomposition.png")
+    print(f"   {s}_changepoints.png")
+print("   stat_changepoints_summary.csv")

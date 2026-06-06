@@ -3,25 +3,11 @@ timeseries_cs.py
 ================
 Time Series Analysis + Changepoint Detection
 Field: Computer Science (cs.*)
-
-What this script does:
-    1. Plots overall CS monthly submissions (1991-2025)
-    2. Decomposes the series into trend, seasonality and noise
-    3. Detects changepoints on overall CS trend
-    4. Plots time series for every CS subcategory individually
-    5. Detects changepoints for each subcategory
-
-Why we do this:
-    CS is the fastest growing field on arXiv. By analysing
-    each subcategory separately we can see exactly WHEN and
-    WHERE the growth happened and link it to real world events
-    like the deep learning revolution, transformer models,
-    and the rise of large language models.
 """
 
 import pandas as pd
 import matplotlib
-matplotlib.use("Agg")   # ← must be BEFORE importing pyplot
+matplotlib.use("Agg")   
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
 import matplotlib.dates as mdates
@@ -40,9 +26,6 @@ os.makedirs("plots/timeseries/cs", exist_ok=True)
 
 # ─────────────────────────────────────────────────────────────────────────────
 # KNOWN REAL WORLD EVENTS
-# These are events that likely caused changepoints in CS research
-# The algorithm will automatically detect changepoints and we will
-# match them to these known events
 # ─────────────────────────────────────────────────────────────────────────────
 
 KNOWN_EVENTS = {
@@ -299,7 +282,7 @@ def plot_changepoints(ts_monthly, changepoint_dates,
     plt.tight_layout(h_pad=0)
     plt.savefig(save_path, dpi=150, bbox_inches="tight")
     plt.close()
-    print(f"  ✓ Saved → {save_path}")
+    print(f"   Saved → {save_path}")
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -307,7 +290,7 @@ def plot_changepoints(ts_monthly, changepoint_dates,
 # ─────────────────────────────────────────────────────────────────────────────
 
 print("=" * 60)
-print("  COMPUTER SCIENCE — TIME SERIES ANALYSIS")
+print("  COMPUTER SCIENCE - TIME SERIES ANALYSIS")
 print("=" * 60)
 
 df = pd.read_csv(r"C:\Users\riyas\OneDrive\ARXIV project\01_data_collection\arxiv_monthly_counts.csv")
@@ -316,24 +299,21 @@ df = pd.read_csv(r"C:\Users\riyas\OneDrive\ARXIV project\01_data_collection\arxi
 cs_rows = df[df["field"] == "cs"]
 print(f"\n  CS rows found    : {len(cs_rows):,}")
 print(f"  CS subcategories : {cs_rows['sub_field'].nunique()}")
-print(f"  Year range       : {cs_rows['year'].min()} – {cs_rows['year'].max()}")
+print(f"  Year range       : {cs_rows['year'].min()} - {cs_rows['year'].max()}")
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# PART 1 — OVERALL CS TIME SERIES
-# What: plots all 40 CS subcategories combined as one series
-# Why:  gives us the big picture of CS growth before drilling
-#       into individual subcategories
+# PART 1 - OVERALL CS TIME SERIES
 # ─────────────────────────────────────────────────────────────────────────────
 
-print("\n" + "─"*60)
-print("  PART 1 — Overall CS Time Series")
-print("─"*60)
+print("\n" + "-"*60)
+print("  PART 1 - Overall CS Time Series")
+print("-"*60)
 
 cs_ts, cs_monthly = prepare_monthly_series(df, field="cs")
 
 print(f"  Date range  : {cs_monthly['date'].min().strftime('%b %Y')} "
-      f"– {cs_monthly['date'].max().strftime('%b %Y')}")
+      f"- {cs_monthly['date'].max().strftime('%b %Y')}")
 print(f"  Total months: {len(cs_monthly)}")
 print(f"  Total papers: {cs_monthly['paper_count'].sum():,}")
 
@@ -349,7 +329,7 @@ ax.plot(rolling.index, rolling.values,
         color="#2196F3", linewidth=2.5,
         linestyle="--", label="12-month rolling average")
 
-ax.set_title("Computer Science — Monthly Paper Submissions (1991–2025)",
+ax.set_title("Computer Science — Monthly Paper Submissions (1991-2025)",
              fontsize=15, fontweight="bold", pad=15)
 ax.set_xlabel("Date", fontsize=13)
 ax.set_ylabel("Papers per Month", fontsize=13)
@@ -361,24 +341,22 @@ plt.tight_layout()
 plt.savefig("plots/timeseries/cs/cs_overall_raw.png",
             dpi=150, bbox_inches="tight")
 plt.close()
-print("  ✓ Raw time series saved")
+print(" Raw time series saved")
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# PART 2 — DECOMPOSITION OF OVERALL CS
-# What: splits the CS series into trend, seasonality and noise
-# Why:  helps us understand the structure before changepoint detection
+# PART 2 - DECOMPOSITION OF OVERALL CS
 # ─────────────────────────────────────────────────────────────────────────────
 
-print("\n" + "─"*60)
-print("  PART 2 — Decomposition")
-print("─"*60)
+print("\n" + "-"*60)
+print("  PART 2 - Decomposition")
+print("-"*60)
 print("  Splitting CS series into: Trend + Seasonality + Noise")
 
 decomp = seasonal_decompose(cs_ts, model="additive", period=12)
 
 fig, axes = plt.subplots(4, 1, figsize=(18, 14))
-fig.suptitle("Computer Science — Time Series Decomposition\n"
+fig.suptitle("Computer Science - Time Series Decomposition\n"
              "Splitting into: Trend | Seasonality | Noise",
              fontsize=15, fontweight="bold", y=1.01)
 
@@ -401,37 +379,35 @@ plt.tight_layout()
 plt.savefig("plots/timeseries/cs/cs_overall_decomposition.png",
             dpi=150, bbox_inches="tight")
 plt.close()
-print("  ✓ Decomposition plot saved")
+print("  Decomposition plot saved")
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# PART 3 — CHANGEPOINT DETECTION ON OVERALL CS
-# What: finds where CS submission patterns suddenly changed
-# Why:  identifies key historical moments in CS research history
+# PART 3 - CHANGEPOINT DETECTION ON OVERALL CS
 # ─────────────────────────────────────────────────────────────────────────────
 
-print("\n" + "─"*60)
-print("  PART 3 — Changepoint Detection (Overall CS)")
-print("─"*60)
+print("\n" + "-"*60)
+print("  PART 3 - Changepoint Detection (Overall CS)")
+print("-"*60)
 
 cp_dates, _ = detect_changepoints(cs_ts, pen=10)
 
 print(f"  Changepoints detected: {len(cp_dates)}")
 for cp in cp_dates:
     event = find_closest_event(cp.year, KNOWN_EVENTS)
-    print(f"    → {cp.strftime('%B %Y')}  |  {event or 'No known event nearby'}")
+    print(f"  -> {cp.strftime('%B %Y')}  |  {event or 'No known event nearby'}")
 
 plot_changepoints(
     cs_monthly, cp_dates,
-    title="Computer Science — Changepoint Detection (1991–2025)\n"
+    title="Computer Science - Changepoint Detection (1991-2025)\n"
           "Red dashed lines show detected structural breaks",
     color="#2196F3",
     save_path="plots/timeseries/cs/cs_overall_changepoints.png"
 )
 
 # Print summary table
-print("\n  CHANGEPOINT SUMMARY — OVERALL CS")
-print("  " + "─"*55)
+print("\n  CHANGEPOINT SUMMARY - OVERALL CS")
+print("  " + "-"*55)
 for i, cp in enumerate(cp_dates, 1):
     before = cs_monthly[cs_monthly["date"] < cp]["paper_count"].mean()
     after  = cs_monthly[cs_monthly["date"] >= cp]["paper_count"].mean()
@@ -447,9 +423,9 @@ for i, cp in enumerate(cp_dates, 1):
 # PART 4 — TIME SERIES FOR IMPORTANT CS SUBCATEGORIES ONLY
 # ─────────────────────────────────────────────────────────────────────────────
 
-print("\n" + "─"*60)
-print("  PART 4 — Important CS Subcategories")
-print("─"*60)
+print("\n" + "-"*60)
+print("  PART 4 - Important CS Subcategories")
+print("-"*60)
 
 # Only analyse these 8 most important subcategories
 IMPORTANT_SUBCATS = {
@@ -465,20 +441,20 @@ IMPORTANT_SUBCATS = {
 
 print(f"  Analysing {len(IMPORTANT_SUBCATS)} key subcategories:")
 for sub, name in IMPORTANT_SUBCATS.items():
-    print(f"    → {sub} — {name}")
+    print(f"    → {sub} - {name}")
 
 all_results = []
 
 for subcat, name in IMPORTANT_SUBCATS.items():
-    print(f"\n  {'─'*50}")
-    print(f"  Processing: {subcat} — {name}")
-    print(f"  {'─'*50}")
+    print(f"\n  {'-'*50}")
+    print(f"  Processing: {subcat} - {name}")
+    print(f"  {'-'*50}")
 
     try:
         ts, monthly = prepare_monthly_series(df, subfield=subcat)
 
         if len(monthly) < 24 or monthly["paper_count"].sum() < 100:
-            print(f"    ⚠ Not enough data — skipping")
+            print(f"    Not enough data - skipping")
             continue
 
         # ── Decomposition plot ────────────────────────────
@@ -487,7 +463,7 @@ for subcat, name in IMPORTANT_SUBCATS.items():
 
         fig, axes = plt.subplots(4, 1, figsize=(18, 12))
         fig.suptitle(
-            f"{subcat} — {name}\nTime Series Decomposition",
+            f"{subcat} - {name}\nTime Series Decomposition",
             fontsize=14, fontweight="bold")
 
         components = [
@@ -509,7 +485,7 @@ for subcat, name in IMPORTANT_SUBCATS.items():
                        f"{subcat.replace('.','_')}_decomposition.png")
         plt.savefig(decomp_path, dpi=150, bbox_inches="tight")
         plt.close()
-        print(f"    ✓ Decomposition saved")
+        print(f"  Decomposition saved")
 
         # ── Changepoint detection ─────────────────────────
         cp_dates_sub, _ = detect_changepoints(ts, pen=8)
@@ -517,14 +493,14 @@ for subcat, name in IMPORTANT_SUBCATS.items():
         print(f"    Changepoints found: {len(cp_dates_sub)}")
         for cp in cp_dates_sub:
             event = find_closest_event(cp.year, KNOWN_EVENTS)
-            print(f"      → {cp.strftime('%B %Y')} | "
+            print(f"   -> {cp.strftime('%B %Y')} | "
                   f"{event or 'No known event nearby'}")
 
         # ── Changepoint plot ──────────────────────────────
         plot_changepoints(
             monthly, cp_dates_sub,
-            title=f"{subcat} — {name}\n"
-                  f"Changepoint Detection (1991–2025)",
+            title=f"{subcat} - {name}\n"
+                  f"Changepoint Detection (1991-2025)",
             color="#2196F3",
             save_path=(f"plots/timeseries/cs/"
                        f"{subcat.replace('.','_')}_changepoints.png")
@@ -547,16 +523,16 @@ for subcat, name in IMPORTANT_SUBCATS.items():
             })
 
     except Exception as e:
-        print(f"    ⚠ Error: {e} — skipping")
+        print(f" Error: {e} - skipping")
         continue
 
 # ─────────────────────────────────────────────────────────────────────────────
 # PART 5 — SAVE SUMMARY TABLE
 # ─────────────────────────────────────────────────────────────────────────────
 
-print("\n" + "─"*60)
-print("  PART 5 — Summary Table")
-print("─"*60)
+print("\n" + "-"*60)
+print("  PART 5 - Summary Table")
+print("-"*60)
 
 results_df = pd.DataFrame(all_results)
 summary_path = (r"C:\Users\riyas\OneDrive\ARXIV project"
@@ -574,12 +550,11 @@ print("  CS TIME SERIES COMPLETE!")
 print("="*60)
 print("\n  Plots saved in: plots/timeseries/cs/")
 print(f"\n  Files generated:")
-print(f"    📊 cs_overall_raw.png")
-print(f"    📊 cs_overall_decomposition.png")
-print(f"    📊 cs_overall_changepoints.png")
+print(f"    cs_overall_raw.png")
+print(f"    cs_overall_decomposition.png")
+print(f"    cs_overall_changepoints.png")
 for sub in IMPORTANT_SUBCATS:
     sub_clean = sub.replace('.','_')
-    print(f"    📊 {sub_clean}_decomposition.png")
-    print(f"    📊 {sub_clean}_changepoints.png")
-print(f"    📄 cs_changepoints_summary.csv")
-print("\n  Done! ✅")
+    print(f"    {sub_clean}_decomposition.png")
+    print(f"    {sub_clean}_changepoints.png")
+print(f"    {sub_clean}_changepoints_summary.csv")

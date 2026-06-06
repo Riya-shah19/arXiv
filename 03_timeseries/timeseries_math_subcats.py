@@ -3,20 +3,6 @@ timeseries_math_subcats.py
 ==========================
 Time Series Analysis + Changepoint Detection
 Field: Mathematics (math.*)
-
-What this script does:
-    1. Plots overall Mathematics monthly submissions (1991-2025)
-    2. Decomposes into trend, seasonality and noise
-    3. Detects changepoints on overall Mathematics
-    4. Repeats for 5 key subcategories:
-       math.OC, math.PR, math.ST, math.NA, math.CO
-
-Why Mathematics is interesting:
-    Mathematics grew because machine learning needed
-    mathematical foundations. Optimisation (math.OC)
-    is literally the backbone of training neural networks.
-    Probability (math.PR) underpins Bayesian methods.
-    This shows how AI indirectly drove growth in pure maths.
 """
 
 import os
@@ -42,20 +28,19 @@ os.makedirs("plots/timeseries/math", exist_ok=True)
 
 # ─────────────────────────────────────────────────────────────────────────────
 # KNOWN REAL WORLD EVENTS
-# Events that likely caused changepoints in Mathematics research
 # ─────────────────────────────────────────────────────────────────────────────
 
 KNOWN_EVENTS = {
     1991: "arXiv launched",
     2000: "arXiv math section created",
-    2008: "Financial crisis — mathematical modelling in demand",
+    2008: "Financial crisis - mathematical modelling in demand",
     2010: "Compressed sensing and sparse methods boom",
-    2012: "Deep learning — maths of optimisation needed",
+    2012: "Deep learning - maths of optimisation needed",
     2014: "ML needs probability and statistical theory",
     2016: "Deep learning theory research begins",
-    2018: "Neural tangent kernel — maths of deep learning",
-    2020: "COVID-19 — mathematical modelling surge",
-    2022: "ChatGPT — theory of LLMs needs mathematics",
+    2018: "Neural tangent kernel - maths of deep learning",
+    2020: "COVID-19 - mathematical modelling surge",
+    2022: "ChatGPT - theory of LLMs needs mathematics",
     2023: "Geometric deep learning and topology in ML",
 }
 
@@ -191,15 +176,15 @@ def plot_decomposition(ts, title, color, save_path):
     plt.tight_layout()
     plt.savefig(save_path, dpi=150, bbox_inches="tight")
     plt.close()
-    print(f"  ✓ Decomposition saved → {save_path}")
+    print(f"  Decomposition saved -> {save_path}")
 
 
 def plot_changepoints(ts_monthly, changepoint_dates,
                       title, color, save_path):
     """
     Time series plot with changepoint lines and event labels.
-    Top panel    → series with date labels
-    Bottom strip → event labels
+    Top panel    -> series with date labels
+    Bottom strip -> event labels
     """
     fig, (ax, ax_labels) = plt.subplots(
         2, 1, figsize=(20, 9),
@@ -274,7 +259,7 @@ def plot_changepoints(ts_monthly, changepoint_dates,
     plt.tight_layout(h_pad=0)
     plt.savefig(save_path, dpi=150, bbox_inches="tight")
     plt.close()
-    print(f"  ✓ Changepoint plot saved → {save_path}")
+    print(f"  Changepoint plot saved → {save_path}")
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -282,7 +267,7 @@ def plot_changepoints(ts_monthly, changepoint_dates,
 # ─────────────────────────────────────────────────────────────────────────────
 
 print("=" * 60)
-print("  MATHEMATICS — TIME SERIES ANALYSIS")
+print("  MATHEMATICS - TIME SERIES ANALYSIS")
 print("=" * 60)
 
 df = pd.read_csv("C:\\Users\\riyas\\OneDrive\\ARXIV project\\01_data_collection\\arxiv_monthly_counts.csv")
@@ -291,7 +276,7 @@ math_rows = df[df["field"] == "math"]
 print(f"\n  Math rows found    : {len(math_rows):,}")
 print(f"  Math subcategories : {math_rows['sub_field'].nunique()}")
 print(f"  Year range         : "
-      f"{math_rows['year'].min()} – {math_rows['year'].max()}")
+      f"{math_rows['year'].min()} - {math_rows['year'].max()}")
 print(f"  Total papers       : {math_rows['paper_count'].sum():,}")
 print(f"\n  Papers by subcategory:")
 for sub, total in (math_rows.groupby("sub_field")["paper_count"]
@@ -299,19 +284,16 @@ for sub, total in (math_rows.groupby("sub_field")["paper_count"]
                              .sort_values(ascending=False)
                              .items()):
     name = MATH_NAMES.get(sub, sub)
-    print(f"    {sub:<12} {name:<30} → {total:>8,}")
+    print(f"    {sub:<12} {name:<30} -> {total:>8,}")
 
 
 # ─────────────────────────────────────────────────────────────────────────────
 # PART 1 — OVERALL MATHEMATICS RAW TIME SERIES
-# What: all math subcategories combined as one series
-# Why:  shows how mathematics as a whole field grew on arXiv
-#       and when it accelerated due to ML influence
 # ─────────────────────────────────────────────────────────────────────────────
 
-print("\n" + "─"*60)
-print("  PART 1 — Overall Mathematics Raw Time Series")
-print("─"*60)
+print("\n" + "-"*60)
+print("  PART 1 - Overall Mathematics Raw Time Series")
+print("-"*60)
 
 math_ts, math_monthly = prepare_monthly_series(df, field="math")
 
@@ -327,7 +309,7 @@ ax.plot(rolling.index, rolling.values,
         linestyle="--", label="12-month rolling average")
 
 ax.set_title(
-    "Mathematics — Monthly Paper Submissions (1991–2025)",
+    "Mathematics - Monthly Paper Submissions (1991-2025)",
     fontsize=15, fontweight="bold", pad=15)
 ax.set_xlabel("Date", fontsize=13)
 ax.set_ylabel("Papers per Month", fontsize=13)
@@ -339,20 +321,20 @@ plt.tight_layout()
 plt.savefig("plots/timeseries/math/math_overall_raw.png",
             dpi=150, bbox_inches="tight")
 plt.close()
-print("  ✓ Raw time series saved")
+print(" Raw time series saved")
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# PART 2 — DECOMPOSITION OF OVERALL MATHEMATICS
+# PART 2 - DECOMPOSITION OF OVERALL MATHEMATICS
 # ─────────────────────────────────────────────────────────────────────────────
 
-print("\n" + "─"*60)
-print("  PART 2 — Decomposition")
-print("─"*60)
+print("\n" + "-"*60)
+print("  PART 2 - Decomposition")
+print("-"*60)
 
 plot_decomposition(
     math_ts,
-    title="Mathematics — Time Series Decomposition\n"
+    title="Mathematics - Time Series Decomposition\n"
           "Observed | Trend | Seasonality | Residual",
     color="#9C27B0",
     save_path="plots/timeseries/math/math_overall_decomposition.png"
@@ -363,28 +345,28 @@ plot_decomposition(
 # PART 3 — CHANGEPOINT DETECTION ON OVERALL MATHEMATICS
 # ─────────────────────────────────────────────────────────────────────────────
 
-print("\n" + "─"*60)
-print("  PART 3 — Changepoint Detection (Overall Mathematics)")
-print("─"*60)
+print("\n" + "-"*60)
+print("  PART 3 - Changepoint Detection (Overall Mathematics)")
+print("-"*60)
 
 cp_dates, _ = detect_changepoints(math_ts, pen=10)
 
 print(f"  Changepoints detected: {len(cp_dates)}")
 for cp in cp_dates:
     event = find_closest_event(cp.year, KNOWN_EVENTS)
-    print(f"    → {cp.strftime('%B %Y')}  "
+    print(f"  -> {cp.strftime('%B %Y')}  "
           f"|  {event or 'No known event nearby'}")
 
 plot_changepoints(
     math_monthly, cp_dates,
-    title="Mathematics — Changepoint Detection (1991–2025)\n"
+    title="Mathematics - Changepoint Detection (1991-2025)\n"
           "Red dashed lines show detected structural breaks",
     color="#9C27B0",
     save_path="plots/timeseries/math/math_overall_changepoints.png"
 )
 
-print("\n  CHANGEPOINT SUMMARY — OVERALL MATHEMATICS")
-print("  " + "─"*55)
+print("\n  CHANGEPOINT SUMMARY - OVERALL MATHEMATICS")
+print("  " + "-"*55)
 for i, cp in enumerate(cp_dates, 1):
     before = math_monthly[
         math_monthly["date"] < cp]["paper_count"].mean()
@@ -401,45 +383,33 @@ for i, cp in enumerate(cp_dates, 1):
 
 # ─────────────────────────────────────────────────────────────────────────────
 # PART 4 — IMPORTANT SUBCATEGORIES
-# What: decomposition + changepoint for 5 key math subcategories
-# Why each one matters:
-#   math.OC → Optimisation — backbone of training neural networks
-#             every gradient descent step uses optimisation theory
-#   math.PR → Probability — foundation of Bayesian methods,
-#             stochastic processes, probabilistic ML
-#   math.ST → Statistics Theory — theoretical basis of ML,
-#             links directly to stat.TH
-#   math.NA → Numerical Analysis — computational algorithms,
-#             matrix operations, eigenvalue problems in ML
-#   math.CO → Combinatorics — graph theory, network analysis,
-#             algorithm complexity
 # ─────────────────────────────────────────────────────────────────────────────
 
-print("\n" + "─"*60)
-print("  PART 4 — Important Subcategories")
-print("─"*60)
+print("\n" + "-"*60)
+print("  PART 4 - Important Subcategories")
+print("-"*60)
 print(f"  Analysing {len(IMPORTANT_SUBCATS)} key subcategories:")
 for sub, name in IMPORTANT_SUBCATS.items():
-    print(f"    → {sub} — {name}")
+    print(f"    -> {sub} - {name}")
 
 all_results = []
 
 for subcat, name in IMPORTANT_SUBCATS.items():
-    print(f"\n  {'─'*50}")
-    print(f"  Processing: {subcat} — {name}")
-    print(f"  {'─'*50}")
+    print(f"\n  {'-'*50}")
+    print(f"  Processing: {subcat} - {name}")
+    print(f"  {'-'*50}")
 
     try:
         ts, monthly = prepare_monthly_series(df, subfield=subcat)
 
         if len(monthly) < 24 or monthly["paper_count"].sum() < 50:
-            print(f"     Not enough data — skipping")
+            print(f"     Not enough data - skipping")
             continue
 
         # Decomposition
         plot_decomposition(
             ts,
-            title=f"{subcat} — {name}\n"
+            title=f"{subcat} - {name}\n"
                   f"Time Series Decomposition",
             color="#9C27B0",
             save_path=(f"plots/timeseries/math/"
@@ -452,14 +422,14 @@ for subcat, name in IMPORTANT_SUBCATS.items():
         print(f"    Changepoints found: {len(cp_dates_sub)}")
         for cp in cp_dates_sub:
             event = find_closest_event(cp.year, KNOWN_EVENTS)
-            print(f"      → {cp.strftime('%B %Y')} | "
+            print(f"   -> {cp.strftime('%B %Y')} | "
                   f"{event or 'No known event nearby'}")
 
         # Changepoint plot
         plot_changepoints(
             monthly, cp_dates_sub,
-            title=f"{subcat} — {name}\n"
-                  f"Changepoint Detection (1991–2025)",
+            title=f"{subcat} - {name}\n"
+                  f"Changepoint Detection (1991-2025)",
             color="#9C27B0",
             save_path=(f"plots/timeseries/math/"
                        f"{subcat.replace('.','_')}_changepoints.png")
@@ -483,10 +453,10 @@ for subcat, name in IMPORTANT_SUBCATS.items():
                 "likely_cause": event or "Unknown",
             })
 
-        print(f"    ✓ Done")
+        print(f"    Done")
 
     except Exception as e:
-        print(f"    Error: {e} — skipping")
+        print(f"    Error: {e} - skipping")
         continue
 
 
@@ -494,9 +464,9 @@ for subcat, name in IMPORTANT_SUBCATS.items():
 # PART 5 — SAVE SUMMARY TABLE
 # ─────────────────────────────────────────────────────────────────────────────
 
-print("\n" + "─"*60)
-print("  PART 5 — Summary Table")
-print("─"*60)
+print("\n" + "-"*60)
+print("  PART 5 - Summary Table")
+print("-"*60)
 
 results_df = pd.DataFrame(all_results)
 results_df.to_csv(
@@ -515,11 +485,11 @@ print("\n" + "="*60)
 print("  MATHEMATICS TIME SERIES COMPLETE!")
 print("="*60)
 print("\n  Files saved in: plots/timeseries/math/")
-print("  📊 math_overall_raw.png")
-print("  📊 math_overall_decomposition.png")
-print("  📊 math_overall_changepoints.png")
+print("   math_overall_raw.png")
+print("   math_overall_decomposition.png")
+print("   math_overall_changepoints.png")
 for sub in IMPORTANT_SUBCATS:
     s = sub.replace(".","_")
-    print(f"  📊 {s}_decomposition.png")
-    print(f"  📊 {s}_changepoints.png")
-print("  📄 math_changepoints_summary.csv")
+    print(f"   {s}_decomposition.png")
+    print(f"   {s}_changepoints.png")
+print("   math_changepoints_summary.csv")

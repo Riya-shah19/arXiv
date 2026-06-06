@@ -58,7 +58,7 @@ math_monthly = math_monthly.dropna(subset=["date"])
 after  = len(math_monthly)
 
 if before != after:
-    print(f"  ⚠ Dropped {before - after} rows with invalid dates")
+    print(f"  Dropped {before - after} rows with invalid dates")
 
 # Sort by date
 math_monthly = math_monthly.sort_values("date").reset_index(drop=True)
@@ -68,7 +68,7 @@ print("=" * 55)
 print("  MATHEMATICS TIME SERIES")
 print("=" * 55)
 print(f"  Date range  : {math_monthly['date'].min().strftime('%b %Y')} "
-      f"– {math_monthly['date'].max().strftime('%b %Y')}")
+      f"- {math_monthly['date'].max().strftime('%b %Y')}")
 print(f"  Total months: {len(math_monthly)}")
 print(f"  Total papers: {math_monthly['paper_count'].sum():,}")
 print(f"\n  First 5 rows:")
@@ -90,7 +90,7 @@ ax.plot(math_monthly["date"], rolling_avg,
         color="#4A148C", linewidth=2.5,
         linestyle="--", label="12-month rolling average")
 
-ax.set_title("Mathematics — Monthly Paper Submissions (1991–2025)",
+ax.set_title("Mathematics - Monthly Paper Submissions (1991-2025)",
              fontsize=15, fontweight="bold", pad=15)
 ax.set_xlabel("Date", fontsize=13)
 ax.set_ylabel("Papers per Month", fontsize=13)
@@ -100,17 +100,11 @@ sns.despine()
 plt.tight_layout()
 plt.savefig("plots/timeseries/math_ts_raw.png", dpi=150, bbox_inches="tight")
 plt.show()
-print("✓ Raw time series plot saved")
+print(" Raw time series plot saved")
 
 
 # ─────────────────────────────────────────────────────────────────────────────
 # STEP 3 — Decompose the time series
-#
-# What decomposition does:
-#   It splits your data into 3 separate components:
-#   1. Trend     → the overall long-term direction (going up/down)
-#   2. Seasonal  → repeating patterns every 12 months
-#   3. Residual  → what's left after removing trend and seasonality (noise)
 # ─────────────────────────────────────────────────────────────────────────────
 
 # Set date as index for decomposition
@@ -123,7 +117,7 @@ ts = ts.asfreq("MS", fill_value=0)
 decomposition = seasonal_decompose(ts, model="additive", period=12)
 
 fig, axes = plt.subplots(4, 1, figsize=(18, 14))
-fig.suptitle("Mathematics — Time Series Decomposition",
+fig.suptitle("Mathematics - Time Series Decomposition",
              fontsize=16, fontweight="bold", y=1.01)
 
 components = [
@@ -145,19 +139,11 @@ plt.tight_layout()
 plt.savefig("plots/timeseries/math_ts_decomposition.png",
             dpi=150, bbox_inches="tight")
 plt.show()
-print("✓ Decomposition plot saved")
+print("Decomposition plot saved")
 
 
 # ─────────────────────────────────────────────────────────────────────────────
 # STEP 4 — Changepoint Detection
-#
-# What changepoints are:
-#   Moments in time where the pattern of submissions SUDDENLY changed.
-#   The ruptures library automatically finds these points.
-#
-# We use the PELT algorithm:
-#   PELT = Pruned Exact Linear Time
-#   It finds the most significant shifts in the data efficiently.
 # ─────────────────────────────────────────────────────────────────────────────
 
 # Use the trend component for changepoint detection
@@ -177,7 +163,7 @@ changepoint_dates = [trend_dates[i-1] for i in breaks[:-1]]
 
 print(f"\n  Changepoints detected: {len(changepoint_dates)}")
 for cp in changepoint_dates:
-    print(f"    → {cp.strftime('%B %Y')}")
+    print(f"   -> {cp.strftime('%B %Y')}")
 
 # Known real world events that may explain math changepoints
 KNOWN_EVENTS = {
@@ -196,8 +182,7 @@ KNOWN_EVENTS = {
 fig, (ax, ax_labels) = plt.subplots(
     2, 1,
     figsize=(20, 9),
-    gridspec_kw={"height_ratios": [5, 1]}  # main plot is 5x taller than label strip
-)
+    gridspec_kw={"height_ratios": [5, 1]}  
 
 # ── Main plot ────────────────────────────────────────────
 ax.plot(math_monthly["date"], math_monthly["paper_count"],
@@ -236,7 +221,7 @@ for i, cp in enumerate(changepoint_dates):
     ax_labels.axvline(x=cp, color="#F44336",
                       linewidth=2, linestyle="--", alpha=0.8)
 
-ax.set_title("Mathematics — Changepoint Detection (1991–2025)\n"
+ax.set_title("Mathematics - Changepoint Detection (1991-2025)\n"
              "Red dashed lines show detected structural breaks",
              fontsize=15, fontweight="bold", pad=15)
 ax.set_ylabel("Papers per Month", fontsize=13)
@@ -244,7 +229,7 @@ ax.legend(fontsize=11)
 ax.yaxis.set_major_formatter(
     mticker.FuncFormatter(lambda x,_: f"{int(x):,}"))
 ax.set_xlim(math_monthly["date"].min(), math_monthly["date"].max())
-ax.set_xticks([])   # hide x ticks on main plot
+ax.set_xticks([])  
 sns.despine(ax=ax)
 
 # ── Label strip below main plot ───────────────────────────
@@ -287,14 +272,14 @@ plt.tight_layout(h_pad=0)
 plt.savefig("plots/timeseries/math_ts_changepoints.png",
             dpi=150, bbox_inches="tight")
 plt.show()
-print("✓ Changepoint plot saved")
+print("Changepoint plot saved")
 
 # ─────────────────────────────────────────────────────────────────────────────
-# STEP 6 — Summary table of changepoints
+# STEP 6 - Summary table of changepoints
 # ─────────────────────────────────────────────────────────────────────────────
 
 print("\n" + "=" * 55)
-print("  CHANGEPOINT SUMMARY — MATHEMATICS")
+print("  CHANGEPOINT SUMMARY - MATHEMATICS")
 print("=" * 55)
 
 for i, cp in enumerate(changepoint_dates, 1):
@@ -321,6 +306,6 @@ for i, cp in enumerate(changepoint_dates, 1):
 print("\n" + "=" * 55)
 print("  FILES SAVED")
 print("=" * 55)
-print("  📊 plots/timeseries/math_ts_raw.png")
-print("  📊 plots/timeseries/math_ts_decomposition.png")
-print("  📊 plots/timeseries/math_ts_changepoints.png")
+print("   plots/timeseries/math_ts_raw.png")
+print("   plots/timeseries/math_ts_decomposition.png")
+print("   plots/timeseries/math_ts_changepoints.png")
