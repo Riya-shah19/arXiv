@@ -1,21 +1,20 @@
 sub_field,name,changepoint,avg_before,avg_after,change_pct,likely_cause
-math.OC,Optimisation and Control,November 2010,16.4,307.7,1773.6,Compressed sensing and sparse methods boom
+math.OC,Optimisation and Control,April 2011,18.1,314.5,1640.9,Compressed sensing and sparse methods boom
 math.OC,Optimisation and Control,June 2015,44.4,388.9,775.7,ML needs probability and statistical theory
-math.OC,Optimisation and Control,March 2019,81.0,466.7,475.8,Neural tangent kernel — maths of deep learning
-math.OC,Optimisation and Control,May 2023,139.6,521.8,273.7,Geometric deep learning and topology in ML
+math.OC,Optimisation and Control,August 2019,86.7,473.0,445.4,Neural tangent kernel - maths of deep learning
 math.PR,Probability,May 2004,15.4,238.5,1452.5,Unknown
-math.PR,Probability,October 2009,51.3,283.3,452.7,Financial crisis — mathematical modelling in demand
-math.PR,Probability,February 2013,79.1,307.0,287.9,Deep learning — maths of optimisation needed
-math.PR,Probability,May 2019,129.2,348.0,169.4,Neural tangent kernel — maths of deep learning
-math.ST,Statistics Theory,September 2005,7.9,107.1,1264.2,Unknown
-math.ST,Statistics Theory,July 2011,30.7,129.9,323.7,Compressed sensing and sparse methods boom
-math.ST,Statistics Theory,January 2019,56.7,167.7,195.8,Neural tangent kernel — maths of deep learning
-math.NA,Numerical Analysis,December 2009,12.8,233.8,1734.1,Financial crisis — mathematical modelling in demand
-math.NA,Numerical Analysis,April 2013,26.6,273.9,929.2,Deep learning — maths of optimisation needed
+math.PR,Probability,October 2009,51.3,283.3,452.7,Financial crisis - mathematical modelling in demand
+math.PR,Probability,July 2013,82.5,310.0,275.7,Deep learning - maths of optimisation needed
+math.PR,Probability,May 2019,129.2,348.0,169.4,Neural tangent kernel - maths of deep learning
+math.ST,Statistics Theory,February 2006,8.7,109.0,1159.7,Financial crisis - mathematical modelling in demand
+math.ST,Statistics Theory,December 2011,32.1,131.7,310.0,Compressed sensing and sparse methods boom
+math.ST,Statistics Theory,January 2019,56.7,167.7,195.8,Neural tangent kernel - maths of deep learning
+math.NA,Numerical Analysis,December 2009,12.8,233.8,1734.1,Financial crisis - mathematical modelling in demand
+math.NA,Numerical Analysis,September 2013,29.0,279.0,861.5,Deep learning - maths of optimisation needed
 math.NA,Numerical Analysis,June 2017,55.1,325.9,491.6,Deep learning theory research begins
-math.NA,Numerical Analysis,May 2020,79.9,362.6,353.6,COVID-19 — mathematical modelling surge
-math.CO,Combinatorics,July 2003,16.9,266.6,1482.2,Unknown
-math.CO,Combinatorics,May 2009,45.2,332.3,635.7,Financial crisis — mathematical modelling in demand
-math.CO,Combinatorics,September 2012,69.8,372.8,433.8,Deep learning — maths of optimisation needed
-math.CO,Combinatorics,July 2018,123.6,442.9,258.3,Neural tangent kernel — maths of deep learning
-math.CO,Combinatorics,October 2019,125.9,446.5,254.5,Neural tangent kernel — maths of deep learning
+math.NA,Numerical Analysis,October 2020,83.7,367.8,339.2,COVID-19 - mathematical modelling surge
+math.CO,Combinatorics,December 2003,18.4,270.9,1375.2,Unknown
+math.CO,Combinatorics,May 2009,45.2,332.3,635.7,Financial crisis - mathematical modelling in demand
+math.CO,Combinatorics,September 2012,69.8,372.8,433.8,Deep learning - maths of optimisation needed
+math.CO,Combinatorics,December 2018,125.9,446.5,254.5,Neural tangent kernel - maths of deep learning
+math.CO,Combinatorics,October 2019,125.9,446.5,254.5,Neural tangent kernel - maths of deep learning

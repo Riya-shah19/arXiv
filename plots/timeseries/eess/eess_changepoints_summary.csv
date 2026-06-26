@@ -1,11 +1,9 @@
 sub_field,name,changepoint,avg_before,avg_after,change_pct,likely_cause
 eess.IV,Image and Video Processing,March 2019,23.3,352.8,1416.0,WaveNet and neural audio synthesis
-eess.SP,Signal Processing,December 2017,12.8,382.5,2897.7,Transformer — NLP and signal processing
-eess.SP,Signal Processing,August 2019,94.9,426.2,349.2,WaveNet and neural audio synthesis
-eess.AS,Audio and Speech Processing,November 2017,4.7,208.4,4308.6,Transformer — NLP and signal processing
+eess.SP,Signal Processing,December 2017,12.8,382.5,2897.7,Transformer - NLP and signal processing
+eess.SP,Signal Processing,March 2019,70.9,418.9,490.9,WaveNet and neural audio synthesis
+eess.AS,Audio and Speech Processing,November 2017,4.7,208.4,4308.6,Transformer - NLP and signal processing
 eess.AS,Audio and Speech Processing,December 2019,50.9,248.4,387.9,WaveNet and neural audio synthesis
-eess.AS,Audio and Speech Processing,November 2022,116.9,288.0,146.4,Diffusion models — image and audio generation
-eess.SY,Systems and Control,March 2011,6.6,237.9,3496.9,Deep learning revolution — image processing
-eess.SY,Systems and Control,August 2016,43.1,339.9,688.5,Transformer — NLP and signal processing
+eess.SY,Systems and Control,April 2013,23.1,269.6,1068.6,Deep learning revolution - image processing
 eess.SY,Systems and Control,July 2019,66.6,433.6,551.5,WaveNet and neural audio synthesis
-eess.SY,Systems and Control,April 2023,142.9,527.2,269.0,Large multimodal models boom
+eess.SY,Systems and Control,September 2023,150.5,546.2,262.8,Large multimodal models boom

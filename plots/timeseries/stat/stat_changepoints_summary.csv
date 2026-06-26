@@ -1,12 +1,10 @@
 sub_field,name,changepoint,avg_before,avg_after,change_pct,likely_cause
-stat.ML,Machine Learning,March 2012,17.0,445.0,2515.1,Deep learning revolution / Data science boom
-stat.ML,Machine Learning,October 2016,69.2,600.6,767.8,Reproducibility crisis in statistics
-stat.ML,Machine Learning,June 2018,114.7,647.4,464.3,Transformer paper — ML meets statistics
-stat.ML,Machine Learning,December 2020,274.4,464.3,69.2,COVID-19 — statistics in global spotlight
+stat.ML,Machine Learning,September 2014,43.8,520.7,1089.3,Data science becomes mainstream career
+stat.ML,Machine Learning,January 2018,97.9,643.4,557.5,Transformer paper - ML meets statistics
+stat.ML,Machine Learning,December 2020,274.4,464.3,69.2,COVID-19 - statistics in global spotlight
 stat.ME,Methodology,November 2011,24.6,187.9,663.7,Big Data era begins
 stat.ME,Methodology,August 2015,45.2,228.5,405.4,Data science becomes mainstream career
-stat.ME,Methodology,October 2019,74.6,288.0,286.1,Federated learning / Privacy statistics
-stat.ME,Methodology,July 2023,114.1,338.1,196.3,Causal AI and uncertainty quantification boom
+stat.ME,Methodology,March 2020,78.5,294.0,274.4,COVID-19 - statistics in global spotlight
 stat.AP,Applications,July 2010,15.5,115.6,647.4,Big Data era begins
 stat.AP,Applications,October 2016,40.2,156.1,288.4,Reproducibility crisis in statistics
 stat.AP,Applications,April 2019,52.2,176.4,237.9,Federated learning / Privacy statistics
